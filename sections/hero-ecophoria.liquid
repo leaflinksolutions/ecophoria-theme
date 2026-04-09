@@ -14,7 +14,7 @@
 
   <p class="eco-sr-only">Ecophoria is a Canadian clean vegan skincare brand offering cruelty-free products with clinically proven actives including niacinamide, vitamin C, hyaluronic acid, and botanical extracts. Plant-powered, sustainably packaged luxury skincare. Free shipping available across Canada.</p>
 
-  <section class="eco-hero" aria-labelledby="EcoHeroHeading-{{ section.id }}">
+  <section class="eco-hero" style="--eco-hero-height: {% case section.settings.hero_height %}{% when 'small' %}60vh{% when 'medium' %}80vh{% else %}100vh{% endcase %}" aria-labelledby="EcoHeroHeading-{{ section.id }}">
 
     <div
       class="eco-hero__slideshow"
@@ -65,7 +65,7 @@
         </div>
       {% endif %}
 
-      <div class="eco-hero__overlay" aria-hidden="true"></div>
+      <div class="eco-hero__overlay" style="--overlay-opacity: {{ section.settings.overlay_opacity | default: 60 | divided_by: 100.0 }}" aria-hidden="true"></div>
     </div>
 
     <div class="eco-container eco-hero__inner">
@@ -75,7 +75,7 @@
           <p class="eco-eyebrow">{{ section.settings.eyebrow }}</p>
         {% endif %}
 
-        <h1 id="EcoHeroHeading-{{ section.id }}" class="eco-hero__heading">
+        <h1 id="EcoHeroHeading-{{ section.id }}" class="eco-hero__heading eco-hero__heading--{{ section.settings.heading_size | default: 'large' }}">
           {{ section.settings.heading }}
         </h1>
 
@@ -246,8 +246,7 @@
 
   .eco-hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: var(--eco-hero-height, 100vh);
     display: flex;
     align-items: center;
     padding: clamp(80px, 12vh, 120px) 0 clamp(100px, 14vh, 140px);
@@ -297,8 +296,9 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(8,8,8,0.5) 0%, rgba(8,8,8,0.15) 35%, rgba(8,8,8,0.65) 75%, var(--eco-bg) 100%),
-      radial-gradient(ellipse 60% 50% at 30% 60%, rgba(46, 90, 69, 0.1) 0%, transparent 70%);
+      linear-gradient(180deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.4) 40%, rgba(8,8,8,0.75) 85%, var(--eco-bg) 100%),
+      radial-gradient(ellipse 70% 60% at 25% 60%, rgba(46,90,69,0.18) 0%, transparent 70%);
+    opacity: var(--overlay-opacity, 0.6);
     pointer-events: none;
   }
 
@@ -329,7 +329,12 @@
     letter-spacing: -0.01em;
     margin: 0 0 20px;
     color: var(--eco-text);
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6);
   }
+
+  .eco-hero__heading--small { font-size: clamp(1.75rem, 4vw, 2.8rem); }
+  .eco-hero__heading--medium { font-size: clamp(2rem, 5vw, 3.4rem); }
+  .eco-hero__heading--large { font-size: clamp(2.25rem, 5.5vw, 3.8rem); }
 
   .eco-hero__sub {
     font-size: clamp(1rem, 1.8vw, 1.15rem);
@@ -338,6 +343,7 @@
     margin: 0 0 36px;
     max-width: 52ch;
     line-height: 1.8;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.5);
   }
 
   .eco-hero__cta {
@@ -548,6 +554,22 @@
 
     if (designMode) {
       paused = true;
+      document.addEventListener('shopify:block:select', function (evt) {
+        var blockEl = evt.target;
+        if (!root.contains(blockEl)) return;
+        var idx = parseInt(blockEl.getAttribute('data-slide-index'), 10);
+        if (isNaN(idx)) return;
+        stop();
+        for (var s = 0; s < slides.length; s++) {
+          slides[s].classList.remove('is-active');
+          slides[s].setAttribute('aria-hidden', 'true');
+          if (dots[s]) { dots[s].classList.remove('is-active'); dots[s].setAttribute('aria-selected', 'false'); }
+        }
+        current = idx;
+        slides[current].classList.add('is-active');
+        slides[current].setAttribute('aria-hidden', 'false');
+        if (dots[current]) { dots[current].classList.add('is-active'); dots[current].setAttribute('aria-selected', 'true'); }
+      });
     } else {
       start();
     }
@@ -604,7 +626,7 @@
       "type": "text",
       "id": "badges",
       "label": "Trust badges (pipe-separated)",
-      "default": "100% Vegan|Cruelty-Free|Clean Ingredients|No Parabens|No Sulfates"
+      "default": "100% Vegan|Cruelty-Free|Certified Leaping Bunny|Clean Ingredients|No Parabens|No Sulfates"
     },
     {
       "type": "select",
@@ -625,6 +647,42 @@
       "id": "carousel_label",
       "label": "Carousel accessibility label",
       "default": "Hero slideshow"
+    },
+    {
+      "type": "header",
+      "content": "Display"
+    },
+    {
+      "type": "select",
+      "id": "hero_height",
+      "label": "Hero height",
+      "options": [
+        { "value": "small", "label": "Small (60vh)" },
+        { "value": "medium", "label": "Medium (80vh)" },
+        { "value": "large", "label": "Large (100vh)" }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 60,
+      "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "large"
     }
   ],
   "blocks": [
