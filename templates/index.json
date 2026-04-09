@@ -327,6 +327,7 @@
         "image_slide_BrcAHe": {
           "type": "image_slide",
           "settings": {
+            "image": "shopify://shop_images/Skincare_jars_on_202604081542.jpg",
             "image_alt": "Ecophoria skincare"
           }
         },
@@ -362,7 +363,7 @@
         "brand_name": "Ecophoria",
         "eyebrow": "Most loved",
         "heading": "Best Sellers",
-        "collection": "",
+        "collection": "bestsellers",
         "products_to_show": 4,
         "view_all_text": "View All Products",
         "view_all_link": "",
