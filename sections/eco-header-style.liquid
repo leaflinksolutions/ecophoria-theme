@@ -1,0 +1,104 @@
+<div class="eco-header-style-injector" id="eco-header-style-{{ section.id }}"></div>
+
+<style>
+  :root {
+    --eco-header-scale: {{ section.settings.font_scale | default: 110 | divided_by: 100.0 }};
+    --eco-header-nav: {{ section.settings.nav_color | default: '#d4d4d8' }};
+    --eco-header-hover: {{ section.settings.nav_hover_color | default: '#7fb89a' }};
+    --eco-announcement-scale: {{ section.settings.announcement_scale | default: 110 | divided_by: 100.0 }};
+  }
+  .header__menu-item,
+  .header__menu-item span,
+  .list-menu__item,
+  .header__inline-menu a {
+    color: var(--eco-header-nav) !important;
+    font-size: calc(1rem * var(--eco-header-scale, 1.1)) !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+  }
+  .header__menu-item:hover,
+  .header__menu-item:hover span,
+  .list-menu__item:hover,
+  .header__inline-menu a:hover,
+  .header__active-menu-item {
+    color: var(--eco-header-hover) !important;
+    text-shadow: 0 0 16px var(--eco-header-hover) !important;
+  }
+  .header__submenu .header__menu-item {
+    font-size: calc(0.95rem * var(--eco-header-scale, 1.1)) !important;
+    color: var(--eco-header-nav) !important;
+  }
+  .header__icon svg,
+  .header__icon-wrapper svg {
+    width: calc(26px * var(--eco-header-scale, 1.1)) !important;
+    height: calc(26px * var(--eco-header-scale, 1.1)) !important;
+    color: var(--eco-header-nav) !important;
+  }
+  .announcement-bar__message,
+  .announcement-bar span,
+  .announcement-bar p {
+    font-size: calc(0.95rem * var(--eco-announcement-scale, 1.1)) !important;
+    color: var(--eco-header-nav) !important;
+  }
+  .menu-drawer__menu-item {
+    font-size: calc(1rem * var(--eco-header-scale, 1.1)) !important;
+    color: var(--eco-header-nav) !important;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Header Style - Ecophoria",
+  "tag": "section",
+  "class": "shopify-section-eco-header-style",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Typography"
+    },
+    {
+      "type": "range",
+      "id": "font_scale",
+      "label": "Header nav font size",
+      "min": 75,
+      "max": 200,
+      "step": 5,
+      "default": 110,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "announcement_scale",
+      "label": "Announcement bar font size",
+      "min": 75,
+      "max": 200,
+      "step": 5,
+      "default": 110,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Header Colors"
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "label": "Nav link color",
+      "default": "#d4d4d8"
+    },
+    {
+      "type": "color",
+      "id": "nav_hover_color",
+      "label": "Hover color",
+      "default": "#7fb89a"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header Style - Ecophoria"
+    }
+  ]
+}
+{% endschema %}
