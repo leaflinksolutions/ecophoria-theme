@@ -551,14 +551,14 @@
           "type": "link_column",
           "settings": {
             "title": "Support",
-            "links": "Shipping|/pages/shipping\nReturns|/pages/returns"
+            "links": "Shipping|https://ecophoria.ca/pages/shipping-returns\nReturns|https://ecophoria.ca/pages/shipping-returns"
           }
         },
         "link_column_gUHPq9": {
           "type": "link_column",
           "settings": {
             "title": "Legal",
-            "links": "Privacy Policy|/policies/privacy-policy\nTerms of Service|/policies/terms-of-service"
+            "links": "Privacy Policy|https://ecophoria.ca/pages/privacy-policy\nTerms of Service|https://ecophoria.ca/pages/terms-of-service"
           }
         }
       },
