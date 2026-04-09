@@ -353,7 +353,10 @@
         "secondary_link": "shopify://pages/about",
         "badges": "100% Vegan|Cruelty-Free|Clean Ingredients|No Parabens|No Sulfates",
         "slide_interval": "10000",
-        "carousel_label": "Hero slideshow"
+        "carousel_label": "Hero slideshow",
+        "hero_height": "medium",
+        "overlay_opacity": 25,
+        "heading_size": "large"
       }
     },
     "products_ecophoria_dKXxmd": {
