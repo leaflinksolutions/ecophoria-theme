@@ -352,7 +352,7 @@
         "secondary_text": "Our Story",
         "secondary_link": "shopify://pages/about",
         "badges": "100% Vegan|Cruelty-Free|Clean Ingredients|No Parabens|No Sulfates",
-        "slide_interval": "6000",
+        "slide_interval": "10000",
         "carousel_label": "Hero slideshow"
       }
     },
