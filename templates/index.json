@@ -544,7 +544,7 @@
           "type": "link_column",
           "settings": {
             "title": "Info",
-            "links": "About Us|/pages/about-us\nFAQ|/pages/faq\nContact|/pages/contact-form"
+            "links": "About Us|https://ecophoria.ca/pages/about\nFAQ|https://ecophoria.ca/pages/faq\nContact|https://ecophoria.ca/pages/contact"
           }
         },
         "link_column_VNMgiN": {
