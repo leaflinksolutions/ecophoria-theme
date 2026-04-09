@@ -1,4 +1,4 @@
-<div class="eco-announcement" id="eco-announcement-{{ section.id }}" style="--scroll-speed: {{ section.settings.scroll_speed | default: 30 }}s; --bar-bg: {{ section.settings.bar_bg | default: '#2e5a45' }}; --bar-text: {{ section.settings.bar_text | default: '#f0efe8' }};">
+<div class="eco-announcement" id="eco-announcement-{{ section.id }}" style="--scroll-speed: {{ section.settings.scroll_speed | default: 30 }}s; --bar-bg: {{ section.settings.bar_bg | default: '#080808' }}; --bar-text: {{ section.settings.bar_text | default: '#d4d4d8' }};">
   <div class="eco-announcement__track" aria-label="Store announcements">
     <div class="eco-announcement__content">
       {% for block in section.blocks %}
@@ -153,13 +153,13 @@
       "type": "color",
       "id": "bar_bg",
       "label": "Background color",
-      "default": "#2e5a45"
+      "default": "#080808"
     },
     {
       "type": "color",
       "id": "bar_text",
       "label": "Text color",
-      "default": "#f0efe8"
+      "default": "#d4d4d8"
     }
   ],
   "blocks": [
