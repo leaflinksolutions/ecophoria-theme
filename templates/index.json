@@ -398,7 +398,7 @@
         "ingredient_YVQ4kL": {
           "type": "ingredient",
           "settings": {
-            "image": "shopify://shop_images/Hyaluronic_acid_molecules_202604081924.jpg",
+            "image": "shopify://shop_images/Hyaluronic_acid_molecules_202604081927.jpg",
             "url": "",
             "image_alt": "Skincare ingredient",
             "symbol": "◆",
@@ -521,6 +521,7 @@
         "eyebrow": "Brand mission",
         "heading": "Luxury clean skincare with values built in",
         "text": "Ecophoria blends clean ingredients, botanical science, and ethical sourcing into a skincare ritual that feels luxurious and aligns with conscious beauty values.",
+        "image": "shopify://shop_images/Ecophoria_products_on_202604081534_1.jpg",
         "image_alt": "Sustainable Ecophoria skincare packaging",
         "cta_eyebrow": "Ready to begin",
         "cta_heading": "Experience Clean Skincare That Works",
