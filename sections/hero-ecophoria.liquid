@@ -28,12 +28,11 @@
       {% if slide_count > 0 %}
         {% for block in section.blocks %}
           {%- assign idx = forloop.index0 -%}
+          {%- assign img_loading = 'eager' -%}
           {%- if idx == 0 -%}
-            {%- assign img_loading = 'eager' -%}
             {%- assign img_priority = 'high' -%}
           {%- else -%}
-            {%- assign img_loading = 'lazy' -%}
-            {%- assign img_priority = 'auto' -%}
+            {%- assign img_priority = 'low' -%}
           {%- endif -%}
           <div
             class="eco-hero__slide{% if idx == 0 %} is-active{% endif %}"
