@@ -376,6 +376,7 @@
         "ingredient_pXKxJW": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Niacinamide_ingredient_spotlight__202604081920.jpg",
             "url": "",
             "image_alt": "Skincare ingredient",
             "symbol": "◈",
@@ -386,6 +387,7 @@
         "ingredient_4pTtrr": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Vitamin_C_powder_202604081921.jpg",
             "url": "",
             "image_alt": "Skincare ingredient",
             "symbol": "◉",
@@ -396,6 +398,7 @@
         "ingredient_YVQ4kL": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Hyaluronic_acid_molecules_202604081924.jpg",
             "url": "",
             "image_alt": "Skincare ingredient",
             "symbol": "◆",
@@ -406,6 +409,7 @@
         "ingredient_8qLhaD": {
           "type": "ingredient",
           "settings": {
+            "image": "shopify://shop_images/Botanical_extracts_with_202604081924.jpg",
             "url": "",
             "image_alt": "Skincare ingredient",
             "symbol": "✦",
