@@ -324,6 +324,13 @@
     "hero_ecophoria_xEz9mD": {
       "type": "hero-ecophoria",
       "blocks": {
+        "image_slide_zPyCHC": {
+          "type": "image_slide",
+          "settings": {
+            "image": "shopify://shop_images/Luxury_skincare_mockup_202604081515.jpg",
+            "image_alt": "Ecophoria skincare"
+          }
+        },
         "image_slide_BrcAHe": {
           "type": "image_slide",
           "settings": {
@@ -340,6 +347,7 @@
         }
       },
       "block_order": [
+        "image_slide_zPyCHC",
         "image_slide_BrcAHe",
         "image_slide_e6YCUh"
       ],
