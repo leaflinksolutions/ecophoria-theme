@@ -350,7 +350,7 @@
         "primary_text": "Shop Skincare",
         "primary_link": "shopify://collections/all",
         "secondary_text": "Our Story",
-        "secondary_link": "",
+        "secondary_link": "shopify://pages/about",
         "badges": "100% Vegan|Cruelty-Free|Clean Ingredients|No Parabens|No Sulfates",
         "slide_interval": "6000",
         "carousel_label": "Hero slideshow"
