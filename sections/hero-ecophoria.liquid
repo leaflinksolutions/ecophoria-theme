@@ -16,11 +16,6 @@
 
   <section class="eco-hero" aria-labelledby="EcoHeroHeading-{{ section.id }}">
 
-    <div class="eco-hero__wordmark" aria-label="Ecophoria">
-      <span class="eco-hero__wm-icon" aria-hidden="true">e</span>
-      <span class="eco-hero__wm-name" aria-hidden="true">ECOPHORIA</span>
-    </div>
-
     <div
       class="eco-hero__slideshow"
       role="region"
@@ -261,43 +256,6 @@
     background: var(--eco-bg);
   }
 
-  /* ---- Wordmark ---- */
-
-  .eco-hero__wordmark {
-    position: absolute;
-    top: clamp(20px, 3vh, 32px);
-    left: clamp(16px, 4vw, 28px);
-    z-index: 10;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    pointer-events: none;
-  }
-
-  .eco-hero__wm-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #5ce0d0, #a0e850);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--eco-font-display);
-    font-size: 18px;
-    font-weight: 700;
-    color: #080808;
-    flex-shrink: 0;
-  }
-
-  .eco-hero__wm-name {
-    font-family: var(--eco-font-body);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--eco-text);
-  }
-
   /* ---- Slideshow ---- */
 
   .eco-hero__slideshow {
@@ -493,15 +451,6 @@
 
     .eco-hero__cta .eco-btn {
       width: 100%;
-    }
-
-    .eco-hero__wordmark {
-      gap: 8px;
-    }
-
-    .eco-hero__wm-name {
-      font-size: 9px;
-      letter-spacing: 0.2em;
     }
   }
 

@@ -17,10 +17,6 @@
 
       <div class="eco-footer__top eco-reveal">
         <div class="eco-footer__brand">
-          <div class="eco-footer__wordmark" aria-label="{{ section.settings.brand_name | default: 'Ecophoria' | escape }}">
-            <span class="eco-footer__icon" aria-hidden="true">e</span>
-            <span class="eco-footer__name">{{ section.settings.brand_name | default: 'Ecophoria' }}</span>
-          </div>
           <p class="eco-footer__tagline">{{ section.settings.tagline }}</p>
         </div>
 
@@ -210,32 +206,6 @@
     .eco-footer__top {
       grid-template-columns: 1fr auto;
     }
-  }
-  .eco-footer__wordmark {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 12px;
-  }
-  .eco-footer__icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #5ce0d0, #a0e850);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--eco-font-display);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--eco-bg);
-  }
-  .eco-footer__name {
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--eco-text);
   }
   .eco-footer__tagline {
     color: var(--eco-text-soft);
