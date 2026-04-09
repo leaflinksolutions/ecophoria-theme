@@ -5,7 +5,7 @@
   endif
 -%}
 
-<div class="eco-root eco-mission-root" id="eco-mission-{{ section.id }}">
+<div class="eco-root eco-mission-root" id="eco-mission-{{ section.id }}" style="--font-scale: {{ section.settings.font_scale | default: 100 | divided_by: 100.0 }};">
   <section class="eco-mission" aria-labelledby="EcoMissionHeading-{{ section.id }}">
     <div class="eco-container">
       <div class="eco-mission__grid">
@@ -110,12 +110,13 @@
   }
 
   .eco-eyebrow {
-    font-size: 0.72rem;
+    font-size: calc(0.85rem * var(--font-scale, 1));
     font-weight: 600;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--eco-accent-light);
+    color: #7fb89a;
     margin: 0 0 8px;
+    text-shadow: 0 0 20px rgba(127, 184, 154, 0.5), 0 1px 2px rgba(0,0,0,0.8);
   }
 
   .eco-mission__grid {
@@ -134,7 +135,7 @@
   .eco-mission__heading {
     font-family: var(--eco-font-display);
     font-weight: 400;
-    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-size: calc(clamp(1.75rem, 3vw, 2.4rem) * var(--font-scale, 1));
     line-height: 1.15;
     margin: 0 0 16px;
     color: var(--eco-text);
@@ -143,7 +144,7 @@
   .eco-mission__text {
     color: var(--eco-text-soft);
     line-height: 1.7;
-    font-size: 0.95rem;
+    font-size: calc(0.95rem * var(--font-scale, 1));
     margin: 0 0 24px;
   }
 
@@ -453,6 +454,16 @@
       "type": "url",
       "id": "cta_link",
       "label": "CTA button link"
+    },
+    {
+      "type": "range",
+      "id": "font_scale",
+      "label": "Font size scale (%)",
+      "min": 80,
+      "max": 150,
+      "step": 5,
+      "default": 100,
+      "unit": "%"
     }
   ],
   "blocks": [

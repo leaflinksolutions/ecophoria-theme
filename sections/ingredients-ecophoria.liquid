@@ -1,4 +1,4 @@
-<div class="eco-root eco-ing-root" id="eco-ingredients-{{ section.id }}">
+<div class="eco-root eco-ing-root" id="eco-ingredients-{{ section.id }}" style="--font-scale: {{ section.settings.font_scale | default: 100 | divided_by: 100.0 }};">
   <section class="eco-ingredients" aria-labelledby="EcoIngHeading-{{ section.id }}">
     <div class="eco-container">
 
@@ -104,17 +104,18 @@
     margin-bottom: clamp(32px, 5vw, 56px);
   }
   .eco-eyebrow {
-    font-size: 0.72rem;
+    font-size: calc(0.85rem * var(--font-scale, 1));
     font-weight: 600;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--eco-accent-light);
+    color: #7fb89a;
     margin: 0 0 8px;
+    text-shadow: 0 0 20px rgba(127, 184, 154, 0.5), 0 1px 2px rgba(0,0,0,0.8);
   }
   .eco-heading {
     font-family: var(--eco-font-display);
     font-weight: 400;
-    font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+    font-size: calc(clamp(1.75rem, 3.5vw, 2.6rem) * var(--font-scale, 1));
     line-height: 1.1;
     margin: 0;
     color: var(--eco-text);
@@ -242,13 +243,13 @@
   }
   .eco-ing__title {
     font-family: var(--eco-font-display);
-    font-size: 1.25rem;
+    font-size: calc(1.25rem * var(--font-scale, 1));
     font-weight: 500;
     margin: 0 0 6px;
     color: var(--eco-text);
   }
   .eco-ing__text {
-    font-size: 0.9rem;
+    font-size: calc(0.9rem * var(--font-scale, 1));
     color: var(--eco-text-soft);
     margin: 0;
     line-height: 1.6;
@@ -348,6 +349,16 @@
       "type": "url",
       "id": "cta_link",
       "label": "Button link"
+    },
+    {
+      "type": "range",
+      "id": "font_scale",
+      "label": "Font size scale (%)",
+      "min": 80,
+      "max": 150,
+      "step": 5,
+      "default": 100,
+      "unit": "%"
     }
   ],
   "blocks": [
