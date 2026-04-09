@@ -1,0 +1,505 @@
+{%- liquid
+  assign cta_link = section.settings.cta_link
+  if cta_link == blank
+    assign cta_link = routes.all_products_collection_url
+  endif
+-%}
+
+<div class="eco-root eco-mission-root" id="eco-mission-{{ section.id }}">
+  <section class="eco-mission" aria-labelledby="EcoMissionHeading-{{ section.id }}">
+    <div class="eco-container">
+      <div class="eco-mission__grid">
+
+        <div class="eco-mission__copy eco-reveal">
+          <p class="eco-eyebrow">{{ section.settings.eyebrow }}</p>
+          <h2 id="EcoMissionHeading-{{ section.id }}" class="eco-mission__heading">
+            {{ section.settings.heading }}
+          </h2>
+          <p class="eco-mission__text">{{ section.settings.text }}</p>
+
+          <ul class="eco-mission__list">
+            {% for block in section.blocks %}
+              {% if block.type == 'point' %}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+              {% endif %}
+            {% endfor %}
+            {% if section.blocks.size == 0 %}
+              <li>Vegan formulas designed for ingredient-conscious skincare routines.</li>
+              <li>Cruelty-free product development with clean, modern sensorial textures.</li>
+              <li>Botanical science paired with proven actives.</li>
+              <li>Ethical sourcing and sustainable packaging.</li>
+            {% endif %}
+          </ul>
+        </div>
+
+        <div class="eco-mission__media eco-reveal">
+          {% if section.settings.image != blank %}
+            {{
+              section.settings.image
+              | image_url: width: 1400
+              | image_tag:
+                widths: '480,720,960,1200,1400',
+                sizes: '(min-width: 990px) 45vw, 100vw',
+                loading: 'lazy',
+                alt: section.settings.image_alt | default: section.settings.heading
+            }}
+          {% else %}
+            <div class="eco-mission__ph" aria-hidden="true">
+              <span>🌱</span>
+              <p>Sustainability image</p>
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="eco-container">
+      <div class="eco-mission__cta eco-reveal">
+        <p class="eco-eyebrow">{{ section.settings.cta_eyebrow }}</p>
+        <h3 class="eco-mission__cta-heading">{{ section.settings.cta_heading }}</h3>
+        <p class="eco-mission__cta-text">{{ section.settings.cta_text }}</p>
+        <a class="eco-btn eco-btn--primary" href="{{ cta_link }}">
+          {{ section.settings.cta_button | default: 'Explore the Collection' }}
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% stylesheet %}
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .eco-mission-root {
+    --eco-bg: #080808;
+    --eco-text: #f0efe8;
+    --eco-text-soft: rgba(240, 239, 232, 0.6);
+    --eco-text-mute: rgba(240, 239, 232, 0.3);
+    --eco-accent: #2e5a45;
+    --eco-accent-light: #3a7a5c;
+    --eco-accent-glow: rgba(46, 90, 69, 0.4);
+    --eco-accent-subtle: rgba(46, 90, 69, 0.15);
+    --eco-silver: #b8b8bd;
+    --eco-silver-light: #d4d4d8;
+    --eco-silver-dark: #8a8a90;
+    --eco-border: rgba(180, 180, 185, 0.12);
+    --eco-glass: rgba(255, 255, 255, 0.04);
+    --eco-font-display: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+    --eco-font-body: 'Outfit', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--eco-bg);
+    color: var(--eco-text);
+    font-family: var(--eco-font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .eco-mission-root *,
+  .eco-mission-root *::before,
+  .eco-mission-root *::after {
+    box-sizing: border-box;
+  }
+
+  .eco-mission {
+    padding: clamp(60px, 10vw, 100px) 0;
+    background: var(--eco-bg);
+  }
+
+  .eco-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 28px);
+  }
+
+  .eco-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--eco-accent-light);
+    margin: 0 0 8px;
+  }
+
+  .eco-mission__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 56px);
+    align-items: center;
+  }
+
+  @media (min-width: 990px) {
+    .eco-mission__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .eco-mission__heading {
+    font-family: var(--eco-font-display);
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    margin: 0 0 16px;
+    color: var(--eco-text);
+  }
+
+  .eco-mission__text {
+    color: var(--eco-text-soft);
+    line-height: 1.7;
+    font-size: 0.95rem;
+    margin: 0 0 24px;
+  }
+
+  .eco-mission__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .eco-mission__list li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 0.95rem;
+    color: var(--eco-text-soft);
+    line-height: 1.6;
+  }
+
+  .eco-mission__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--eco-silver);
+    box-shadow: 0 0 8px rgba(180, 180, 185, 0.18);
+  }
+
+  .eco-mission__media {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--eco-border);
+    position: relative;
+  }
+
+  .eco-mission__media img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .eco-mission__ph {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(145deg, #0e120e, #0a0e0a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--eco-text-mute);
+    position: relative;
+  }
+
+  .eco-mission__ph span {
+    font-size: 3rem;
+    opacity: 0.4;
+    margin-bottom: 8px;
+  }
+
+  .eco-mission__ph p {
+    font-family: var(--eco-font-display);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .eco-mission__ph::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, var(--eco-accent-glow) 0%, transparent 60%);
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  .eco-mission__cta {
+    margin-top: clamp(48px, 8vw, 80px);
+    background: var(--eco-glass);
+    border: 1px solid var(--eco-border);
+    border-radius: 32px;
+    padding: clamp(40px, 7vw, 72px) clamp(24px, 5vw, 48px);
+    text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .eco-mission__cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center bottom, var(--eco-accent-subtle) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .eco-mission__cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--eco-silver-dark), var(--eco-silver), var(--eco-silver-dark), transparent);
+    opacity: 0.3;
+  }
+
+  .eco-mission__cta-heading {
+    font-family: var(--eco-font-display);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    line-height: 1.15;
+    margin: 0 0 8px;
+    position: relative;
+    color: var(--eco-text);
+  }
+
+  .eco-mission__cta-text {
+    font-size: 0.95rem;
+    color: var(--eco-text-soft);
+    margin: 0 auto 28px;
+    max-width: 44ch;
+    position: relative;
+  }
+
+  .eco-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--eco-font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 32px;
+    padding: 14px 34px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .eco-btn--primary {
+    background: var(--eco-accent);
+    color: var(--eco-text);
+    box-shadow: 0 0 24px var(--eco-accent-glow);
+  }
+
+  .eco-btn--primary:hover,
+  .eco-btn--primary:focus-visible {
+    background: var(--eco-accent-light);
+    box-shadow: 0 0 36px var(--eco-accent-glow);
+    transform: translateY(-2px);
+    outline: none;
+  }
+
+  .eco-btn--primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+    transition: left 0.6s ease;
+  }
+
+  .eco-btn--primary:hover::after {
+    left: 130%;
+  }
+
+  .eco-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .eco-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  body.shopify-design-mode .eco-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .eco-reveal,
+    .eco-btn {
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+
+  @media (max-width: 989px) {
+    .eco-mission__media {
+      max-width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+<script>
+  (function () {
+    var root = document.getElementById('eco-mission-{{ section.id }}');
+    if (!root) return;
+    var reveals = root.querySelectorAll('.eco-reveal');
+    if (!reveals.length) return;
+    if (document.body.classList.contains('shopify-design-mode') ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        !('IntersectionObserver' in window)) {
+      for (var i = 0; i < reveals.length; i++) reveals[i].classList.add('is-visible');
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    for (var j = 0; j < reveals.length; j++) io.observe(reveals[j]);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Mission - Ecophoria",
+  "tag": "section",
+  "class": "shopify-section-eco-mission",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Mission"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Brand mission"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Luxury clean skincare with values built in"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Mission text",
+      "default": "Ecophoria blends clean ingredients, botanical science, and ethical sourcing into a skincare ritual that feels luxurious and aligns with conscious beauty values."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Mission image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "Sustainable Ecophoria skincare packaging"
+    },
+    {
+      "type": "header",
+      "content": "Final CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_eyebrow",
+      "label": "CTA eyebrow",
+      "default": "Ready to begin"
+    },
+    {
+      "type": "text",
+      "id": "cta_heading",
+      "label": "CTA heading",
+      "default": "Experience Clean Skincare That Works"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "CTA text",
+      "default": "Discover formulas that combine high-performance actives, vegan standards, and elevated daily care."
+    },
+    {
+      "type": "text",
+      "id": "cta_button",
+      "label": "CTA button text",
+      "default": "Explore the Collection"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "CTA button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point",
+      "name": "Mission point",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Vegan formulas designed for ingredient-conscious skincare routines."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mission - Ecophoria",
+      "blocks": [
+        {
+          "type": "point",
+          "settings": {
+            "text": "Vegan formulas designed for ingredient-conscious skincare routines."
+          }
+        },
+        {
+          "type": "point",
+          "settings": {
+            "text": "Cruelty-free product development with clean, modern sensorial textures."
+          }
+        },
+        {
+          "type": "point",
+          "settings": {
+            "text": "Botanical science paired with proven actives like niacinamide, vitamin C, and hyaluronic acid."
+          }
+        },
+        {
+          "type": "point",
+          "settings": {
+            "text": "Ethical sourcing and sustainable packaging that supports lower-impact beauty."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,567 @@
+{%- liquid
+  assign shop_link = section.settings.shop_link
+  if shop_link == blank
+    assign shop_link = '/collections/all'
+  endif
+  assign story_link = section.settings.story_link
+  if story_link == blank
+    assign story_link = '/pages/about-us'
+  endif
+  assign year = 'now' | date: '%Y'
+-%}
+
+<div class="eco-root eco-footer-root" id="eco-footer-{{ section.id }}">
+  <footer class="eco-footer" aria-labelledby="EcoFooterHeading-{{ section.id }}">
+    <h2 id="EcoFooterHeading-{{ section.id }}" class="eco-sr-only">Site footer</h2>
+    <div class="eco-container">
+
+      <div class="eco-footer__top eco-reveal">
+        <div class="eco-footer__brand">
+          <div class="eco-footer__wordmark" aria-label="{{ section.settings.brand_name | default: 'Ecophoria' | escape }}">
+            <span class="eco-footer__icon" aria-hidden="true">e</span>
+            <span class="eco-footer__name">{{ section.settings.brand_name | default: 'Ecophoria' }}</span>
+          </div>
+          <p class="eco-footer__tagline">{{ section.settings.tagline }}</p>
+        </div>
+
+        <div class="eco-footer__cta">
+          <a class="eco-btn eco-btn--primary" href="{{ shop_link }}">
+            {{ section.settings.shop_text | default: 'Shop' }}
+          </a>
+          <a class="eco-btn eco-btn--silver" href="{{ story_link }}">
+            {{ section.settings.story_text | default: 'Our Story' }}
+          </a>
+        </div>
+      </div>
+
+      <hr class="eco-divider" aria-hidden="true">
+
+      <div class="eco-footer__cols">
+        {% assign col_count = 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'link_column' %}
+            {% assign col_count = col_count | plus: 1 %}
+            <nav class="eco-footer__col" aria-labelledby="EcoFooterCol-{{ block.id }}" {{ block.shopify_attributes }}>
+              <h3 id="EcoFooterCol-{{ block.id }}" class="eco-footer__col-title">{{ block.settings.title }}</h3>
+              <ul role="list">
+                {% assign items = block.settings.links | newline_to_br | split: '<br />' %}
+                {% for item in items %}
+                  {%- assign parts = item | strip | split: '|' -%}
+                  {% if parts.size >= 1 and parts[0] != blank %}
+                    <li>
+                      <a href="{{ parts[1] | default: '#' | strip }}">{{ parts[0] | strip }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </nav>
+          {% endif %}
+        {% endfor %}
+
+        {% if col_count == 0 %}
+          <nav class="eco-footer__col">
+            <h3 class="eco-footer__col-title">Shop</h3>
+            <ul role="list">
+              <li><a href="/collections/all">All Products</a></li>
+              <li><a href="/collections/best-sellers">Best Sellers</a></li>
+              <li><a href="/collections/new">New Arrivals</a></li>
+            </ul>
+          </nav>
+          <nav class="eco-footer__col">
+            <h3 class="eco-footer__col-title">Info</h3>
+            <ul role="list">
+              <li><a href="/pages/about-us">About Us</a></li>
+              <li><a href="/pages/faq">FAQ</a></li>
+              <li><a href="/pages/contact-form">Contact</a></li>
+            </ul>
+          </nav>
+          <nav class="eco-footer__col">
+            <h3 class="eco-footer__col-title">Legal</h3>
+            <ul role="list">
+              <li><a href="/policies/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/policies/terms-of-service">Terms of Service</a></li>
+            </ul>
+          </nav>
+        {% endif %}
+
+        <div class="eco-footer__col">
+          <h3 class="eco-footer__col-title">Follow</h3>
+          <ul class="eco-footer__social" role="list">
+            {% if section.settings.instagram_url != blank %}
+              <li>
+                <a href="{{ section.settings.instagram_url }}" aria-label="Instagram" rel="noopener" target="_blank">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+                  </svg>
+                </a>
+              </li>
+            {% endif %}
+            {% if section.settings.tiktok_url != blank %}
+              <li>
+                <a href="{{ section.settings.tiktok_url }}" aria-label="TikTok" rel="noopener" target="_blank">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.73a4.85 4.85 0 01-1-.04z"/>
+                  </svg>
+                </a>
+              </li>
+            {% endif %}
+            {% if section.settings.pinterest_url != blank %}
+              <li>
+                <a href="{{ section.settings.pinterest_url }}" aria-label="Pinterest" rel="noopener" target="_blank">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M11 8c2 0 3.5 1.2 3.5 3 0 2.2-1.5 3.5-3 3.5-1 0-1.7-.5-1.5-1.3l.5-2.2"/>
+                    <path d="M10 19l1.5-7"/>
+                  </svg>
+                </a>
+              </li>
+            {% endif %}
+            {% if section.settings.instagram_url == blank and section.settings.tiktok_url == blank and section.settings.pinterest_url == blank %}
+              <li>
+                <a href="#" aria-label="Instagram (placeholder)">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="TikTok (placeholder)">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.73a4.85 4.85 0 01-1-.04z"/>
+                  </svg>
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+
+      <hr class="eco-divider" aria-hidden="true">
+
+      <div class="eco-footer__bottom">
+        <p>&copy; {{ year }} {{ section.settings.brand_name | default: 'Ecophoria' }}. {{ section.settings.copyright | default: 'All rights reserved.' }}</p>
+        <p class="eco-footer__credit">{{ section.settings.credit }}</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+{% stylesheet %}
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+
+  .eco-footer-root {
+    --eco-bg: #080808;
+    --eco-bg-2: #0a0a0a;
+    --eco-text: #f0efe8;
+    --eco-text-soft: rgba(240, 239, 232, 0.6);
+    --eco-text-mute: rgba(240, 239, 232, 0.3);
+    --eco-accent: #2e5a45;
+    --eco-accent-light: #3a7a5c;
+    --eco-accent-glow: rgba(46, 90, 69, 0.4);
+    --eco-silver: #b8b8bd;
+    --eco-silver-light: #d4d4d8;
+    --eco-silver-dark: #8a8a90;
+    --eco-border: rgba(180, 180, 185, 0.12);
+    --eco-glass: rgba(255, 255, 255, 0.04);
+    --eco-font-display: 'Cormorant Garamond', 'Garamond', Georgia, serif;
+    --eco-font-body: 'Outfit', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--eco-bg-2);
+    color: var(--eco-text);
+    font-family: var(--eco-font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  .eco-footer-root *,
+  .eco-footer-root *::before,
+  .eco-footer-root *::after {
+    box-sizing: border-box;
+  }
+  .eco-footer {
+    padding: clamp(56px, 8vw, 88px) 0 clamp(28px, 4vw, 40px);
+    background: var(--eco-bg-2);
+  }
+  .eco-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 28px);
+  }
+  .eco-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .eco-footer__top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 750px) {
+    .eco-footer__top {
+      grid-template-columns: 1fr auto;
+    }
+  }
+  .eco-footer__wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .eco-footer__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5ce0d0, #a0e850);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--eco-font-display);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--eco-bg);
+  }
+  .eco-footer__name {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--eco-text);
+  }
+  .eco-footer__tagline {
+    color: var(--eco-text-soft);
+    font-size: 0.9rem;
+    margin: 0;
+    max-width: 44ch;
+    line-height: 1.6;
+  }
+  .eco-footer__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .eco-divider {
+    height: 1px;
+    border: none;
+    background: linear-gradient(90deg, transparent 5%, var(--eco-border) 30%, rgba(212, 212, 216, 0.15) 50%, var(--eco-border) 70%, transparent 95%);
+    margin: 0;
+  }
+  .eco-footer__cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+    padding: 40px 0;
+    align-items: start;
+  }
+  @media (min-width: 750px) {
+    .eco-footer__cols {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .eco-footer__col {
+    min-width: 0;
+  }
+  .eco-footer__col-title {
+    font-family: var(--eco-font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--eco-silver);
+    margin: 0 0 14px;
+  }
+  .eco-footer__col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .eco-footer__col a {
+    font-size: 0.88rem;
+    color: var(--eco-text-soft);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .eco-footer__col a:hover,
+  .eco-footer__col a:focus-visible {
+    color: var(--eco-accent-light);
+    outline: none;
+  }
+  .eco-footer__social {
+    flex-direction: row !important;
+    gap: 14px !important;
+  }
+  .eco-footer__social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--eco-border);
+    background: var(--eco-glass);
+    color: var(--eco-silver);
+    transition: all 0.3s ease;
+  }
+  .eco-footer__social a:hover,
+  .eco-footer__social a:focus-visible {
+    border-color: var(--eco-accent);
+    color: var(--eco-accent-light);
+    box-shadow: 0 0 16px var(--eco-accent-glow);
+    outline: none;
+  }
+  .eco-footer__bottom {
+    padding-top: 28px;
+    text-align: center;
+    color: var(--eco-text-mute);
+    font-size: 0.78rem;
+  }
+  .eco-footer__bottom p {
+    margin: 0 0 4px;
+  }
+  .eco-footer__credit {
+    color: var(--eco-silver-dark);
+  }
+  .eco-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--eco-font-body);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    padding: 14px 34px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .eco-btn--primary {
+    background: var(--eco-accent);
+    color: var(--eco-text);
+    box-shadow: 0 0 24px var(--eco-accent-glow);
+  }
+  .eco-btn--primary:hover,
+  .eco-btn--primary:focus-visible {
+    background: var(--eco-accent-light);
+    transform: translateY(-2px);
+    outline: none;
+  }
+  .eco-btn--silver {
+    background: var(--eco-glass);
+    color: var(--eco-silver-light);
+    border-color: var(--eco-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .eco-btn--silver:hover,
+  .eco-btn--silver:focus-visible {
+    border-color: var(--eco-silver);
+    color: #fff;
+    transform: translateY(-2px);
+    outline: none;
+  }
+  .eco-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .eco-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  body.shopify-design-mode .eco-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .eco-reveal,
+    .eco-btn {
+      transition: none !important;
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+{% endstylesheet %}
+
+<script>
+  (function () {
+    var root = document.getElementById('eco-footer-{{ section.id }}');
+    if (!root) return;
+    var reveals = root.querySelectorAll('.eco-reveal');
+    if (!reveals.length) return;
+    if (document.body.classList.contains('shopify-design-mode') ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        !('IntersectionObserver' in window)) {
+      for (var i = 0; i < reveals.length; i++) reveals[i].classList.add('is-visible');
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    for (var j = 0; j < reveals.length; j++) io.observe(reveals[j]);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Footer - Ecophoria",
+  "tag": "section",
+  "class": "shopify-section-eco-footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand"
+    },
+    {
+      "type": "text",
+      "id": "brand_name",
+      "label": "Brand name",
+      "default": "Ecophoria"
+    },
+    {
+      "type": "textarea",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Clean vegan skincare that combines botanical science with luxury formulations."
+    },
+    {
+      "type": "header",
+      "content": "Footer CTAs"
+    },
+    {
+      "type": "text",
+      "id": "shop_text",
+      "label": "Shop button text",
+      "default": "Shop"
+    },
+    {
+      "type": "url",
+      "id": "shop_link",
+      "label": "Shop button link"
+    },
+    {
+      "type": "text",
+      "id": "story_text",
+      "label": "Story button text",
+      "default": "Our Story"
+    },
+    {
+      "type": "url",
+      "id": "story_link",
+      "label": "Story button link"
+    },
+    {
+      "type": "header",
+      "content": "Social"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "tiktok_url",
+      "label": "TikTok URL"
+    },
+    {
+      "type": "url",
+      "id": "pinterest_url",
+      "label": "Pinterest URL"
+    },
+    {
+      "type": "header",
+      "content": "Bottom bar"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Copyright text",
+      "default": "All rights reserved."
+    },
+    {
+      "type": "text",
+      "id": "credit",
+      "label": "Credit line",
+      "default": "Clean vegan skincare where nature meets luxury."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link_column",
+      "name": "Link column",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Column title",
+          "default": "Shop"
+        },
+        {
+          "type": "textarea",
+          "id": "links",
+          "label": "Links (one per line: Label|URL)",
+          "default": "All Products|/collections/all\nBest Sellers|/collections/best-sellers\nNew Arrivals|/collections/new"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer - Ecophoria",
+      "blocks": [
+        {
+          "type": "link_column",
+          "settings": {
+            "title": "Shop",
+            "links": "All Products|/collections/all\nBest Sellers|/collections/best-sellers\nNew Arrivals|/collections/new"
+          }
+        },
+        {
+          "type": "link_column",
+          "settings": {
+            "title": "Info",
+            "links": "About Us|/pages/about-us\nFAQ|/pages/faq\nContact|/pages/contact-form"
+          }
+        },
+        {
+          "type": "link_column",
+          "settings": {
+            "title": "Support",
+            "links": "Shipping|/pages/shipping\nReturns|/pages/returns"
+          }
+        },
+        {
+          "type": "link_column",
+          "settings": {
+            "title": "Legal",
+            "links": "Privacy Policy|/policies/privacy-policy\nTerms of Service|/policies/terms-of-service"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
