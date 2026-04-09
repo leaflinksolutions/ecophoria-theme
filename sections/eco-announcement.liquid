@@ -1,0 +1,220 @@
+<div class="eco-announcement" id="eco-announcement-{{ section.id }}" style="--scroll-speed: {{ section.settings.scroll_speed | default: 30 }}s; --bar-bg: {{ section.settings.bar_bg | default: '#2e5a45' }}; --bar-text: {{ section.settings.bar_text | default: '#f0efe8' }};">
+  <div class="eco-announcement__track" aria-label="Store announcements">
+    <div class="eco-announcement__content">
+      {% for block in section.blocks %}
+        {% if block.type == 'message' %}
+          <span class="eco-announcement__item" {{ block.shopify_attributes }}>
+            {% if block.settings.icon != blank %}<span class="eco-announcement__icon" aria-hidden="true">{{ block.settings.icon }}</span>{% endif %}
+            {% if block.settings.link != blank %}
+              <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>
+            {% else %}
+              {{ block.settings.text }}
+            {% endif %}
+          </span>
+          <span class="eco-announcement__divider" aria-hidden="true">&bull;</span>
+        {% endif %}
+      {% endfor %}
+      {% if section.blocks.size == 0 %}
+        <span class="eco-announcement__item">{{ section.settings.default_text | default: 'Free Shipping on Orders $75+' }}</span>
+        <span class="eco-announcement__divider" aria-hidden="true">&bull;</span>
+      {% endif %}
+    </div>
+    <div class="eco-announcement__content" aria-hidden="true">
+      {% for block in section.blocks %}
+        {% if block.type == 'message' %}
+          <span class="eco-announcement__item">
+            {% if block.settings.icon != blank %}<span class="eco-announcement__icon">{{ block.settings.icon }}</span>{% endif %}
+            {% if block.settings.link != blank %}
+              <a href="{{ block.settings.link }}">{{ block.settings.text }}</a>
+            {% else %}
+              {{ block.settings.text }}
+            {% endif %}
+          </span>
+          <span class="eco-announcement__divider">&bull;</span>
+        {% endif %}
+      {% endfor %}
+      {% if section.blocks.size == 0 %}
+        <span class="eco-announcement__item">{{ section.settings.default_text | default: 'Free Shipping on Orders $75+' }}</span>
+        <span class="eco-announcement__divider">&bull;</span>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .eco-announcement {
+    background: var(--bar-bg, #2e5a45);
+    color: var(--bar-text, #f0efe8);
+    overflow: hidden;
+    width: 100%;
+    padding: 14px 0;
+    font-family: 'Outfit', -apple-system, Arial, sans-serif;
+    border-bottom: 1px solid rgba(180, 180, 185, 0.12);
+    position: relative;
+  }
+  .eco-announcement::before,
+  .eco-announcement::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .eco-announcement::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--bar-bg, #2e5a45), transparent);
+  }
+  .eco-announcement::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--bar-bg, #2e5a45), transparent);
+  }
+  .eco-announcement__track {
+    display: flex;
+    width: max-content;
+    animation: eco-marquee var(--scroll-speed, 30s) linear infinite;
+  }
+  .eco-announcement__track:hover {
+    animation-play-state: paused;
+  }
+  .eco-announcement__content {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .eco-announcement__item {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0 24px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .eco-announcement__item a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  .eco-announcement__item a:hover {
+    opacity: 0.8;
+  }
+  .eco-announcement__icon {
+    font-size: 1.1rem;
+  }
+  .eco-announcement__divider {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    padding: 0 4px;
+  }
+  @keyframes eco-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @media (max-width: 749px) {
+    .eco-announcement__item {
+      font-size: 0.92rem;
+      padding: 0 18px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .eco-announcement__track {
+      animation: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Announcement - Ecophoria",
+  "tag": "section",
+  "class": "shopify-section-eco-announcement",
+  "settings": [
+    {
+      "type": "text",
+      "id": "default_text",
+      "label": "Default message (used if no blocks added)",
+      "default": "Free Shipping on Orders $75+"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "label": "Scroll speed (seconds per loop)",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "default": 30,
+      "unit": "s"
+    },
+    {
+      "type": "color",
+      "id": "bar_bg",
+      "label": "Background color",
+      "default": "#2e5a45"
+    },
+    {
+      "type": "color",
+      "id": "bar_text",
+      "label": "Text color",
+      "default": "#f0efe8"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "message",
+      "name": "Message",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Icon (emoji)",
+          "default": "\u26a1"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Message text",
+          "default": "Free Shipping on Orders $75+"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement - Ecophoria",
+      "blocks": [
+        {
+          "type": "message",
+          "settings": {
+            "icon": "\u26a1",
+            "text": "Free Shipping on Orders $75+"
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "icon": "\ud83c\udf3f",
+            "text": "100% Vegan and Cruelty-Free"
+          }
+        },
+        {
+          "type": "message",
+          "settings": {
+            "icon": "\u2728",
+            "text": "Clean Beauty Certified"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
