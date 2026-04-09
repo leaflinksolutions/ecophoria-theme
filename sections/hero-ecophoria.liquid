@@ -27,7 +27,7 @@
       aria-roledescription="carousel"
       aria-label="{{ section.settings.carousel_label | default: 'Hero slideshow' | escape }}"
       data-eco-carousel
-      data-interval="{{ section.settings.slide_interval | default: 6000 }}"
+      data-interval="{{ section.settings.slide_interval | default: '6000' }}"
       tabindex="0"
     >
       {% if slide_count > 0 %}
@@ -659,13 +659,18 @@
       "default": "100% Vegan|Cruelty-Free|Clean Ingredients|No Parabens|No Sulfates"
     },
     {
-      "type": "range",
+      "type": "select",
       "id": "slide_interval",
-      "label": "Slide interval (ms)",
-      "min": 3000,
-      "max": 10000,
-      "step": 500,
-      "default": 6000
+      "label": "Slide interval",
+      "options": [
+        { "value": "3000", "label": "3 seconds" },
+        { "value": "4000", "label": "4 seconds" },
+        { "value": "5000", "label": "5 seconds" },
+        { "value": "6000", "label": "6 seconds" },
+        { "value": "8000", "label": "8 seconds" },
+        { "value": "10000", "label": "10 seconds" }
+      ],
+      "default": "6000"
     },
     {
       "type": "text",
@@ -678,6 +683,7 @@
     {
       "type": "image_slide",
       "name": "Image slide",
+      "limit": 16,
       "settings": [
         {
           "type": "image_picker",
