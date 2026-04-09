@@ -356,7 +356,7 @@
         "slide_interval": "10000",
         "carousel_label": "Hero slideshow",
         "hero_height": "medium",
-        "overlay_opacity": 30,
+        "overlay_opacity": 15,
         "heading_size": "large",
         "font_scale": 115
       }
