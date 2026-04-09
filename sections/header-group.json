@@ -1,1 +1,48 @@
-{"name":"t:sections.header.name","type":"header","sections":{"custom_liquid_rFrDLX":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<div class=\"announcement-bar\">\n  <div class=\"marquee\">\n    <div class=\"marquee-inner\">\n      <span>⚡ Free Shipping on Orders $75+ &nbsp;&nbsp;&nbsp;<\/span>\n      <span>⚡ Free Shipping on Orders $75+ &nbsp;&nbsp;&nbsp;<\/span>\n      <span>⚡ Free Shipping on Orders $75+ &nbsp;&nbsp;&nbsp;<\/span>\n      <span>⚡ Free Shipping on Orders $75+ &nbsp;&nbsp;&nbsp;<\/span>\n    <\/div>\n  <\/div>\n<\/div>\n\n<style>\n.announcement-bar {\n  background-color: #000000;\n  overflow: hidden;\n  width: 100%;\n  padding: 10px 0;\n  font-family: sans-serif;\n}\n\n.marquee {\n  display: block;\n  overflow: hidden;\n  position: relative;\n  width: 100%;\n}\n\n.marquee-inner {\n  display: inline-block;\n  white-space: nowrap;\n  animation: marquee-scroll 20s linear infinite;\n}\n\n.marquee-inner span {\n  color: #d4af37;\n  font-size: 14px;\n  font-weight: 600;\n  display: inline-block;\n  margin-right: 50px;\n}\n\n@keyframes marquee-scroll {\n  0% {\n    transform: translateX(0%);\n  }\n  100% {\n    transform: translateX(-50%);\n  }\n}\n<\/style>","color_scheme":"","padding_top":0,"padding_bottom":0}},"announcement-bar":{"type":"announcement-bar","blocks":{"announcement-bar-0":{"type":"announcement","disabled":true,"settings":{"text":"✨ Free Shipping on Orders $75+ | Clean • Vegan • Cruelty-Free","link":""}}},"block_order":["announcement-bar-0"],"settings":{"auto_rotate":false,"change_slides_speed":5,"color_scheme":"scheme-3","show_line_separator":true,"show_social":false,"enable_country_selector":false,"enable_language_selector":false}},"header":{"type":"header","settings":{"logo_position":"middle-center","mobile_logo_position":"center","menu":"main-menu-1","menu_type_desktop":"dropdown","sticky_header_type":"on-scroll-up","show_line_separator":false,"color_scheme":"scheme-5","menu_color_scheme":"scheme-a2fff22d-cbc1-46d6-92e6-4935ff1627e3","enable_country_selector":true,"enable_language_selector":true,"enable_customer_avatar":true,"margin_bottom":0,"padding_top":0,"padding_bottom":0}},"hero_ecophoria_j37PJk":{"type":"hero-ecophoria","blocks":{"image_slide_Rd9aGd":{"type":"image_slide","settings":{"image_alt":"Ecophoria skincare"}},"image_slide_Vxd9RG":{"type":"image_slide","settings":{"image_alt":"Ecophoria skincare"}}},"block_order":["image_slide_Rd9aGd","image_slide_Vxd9RG"],"custom_css":[".eco-eyebrow {font-size: 1.35rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--eco-accent-light); margin: 0 0 10px; text-align: center;}"],"name":"Hero - Ecophoria","settings":{"eyebrow":"Luxury skincare powered by nature","heading":"Elevate Your Routine With Clean, High-Performance Skincare","subheading":"Thoughtfully formulated essentials designed to nourish, restore, and reveal healthier-looking skin.","primary_text":"Shop Collection","primary_link":"","secondary_text":"Learn More","secondary_link":"","badges":"True Organic|True Natural|True Vegan|Cruelty-Free (Leaping Bunny & PETA Certified)|GMO-Free|Toxic-Free","slide_interval":4500,"carousel_label":"Hero slideshow"}},"ingredients_ecophoria_gYBA7e":{"type":"ingredients-ecophoria","blocks":{"ingredient_4h96hr":{"type":"ingredient","settings":{"image_alt":"Skincare ingredient","symbol":"◈","title":"Niacinamide","text":"Helps refine the look of pores, support a balanced complexion, and improve visible skin clarity."}},"ingredient_7PC9h8":{"type":"ingredient","settings":{"image_alt":"Skincare ingredient","symbol":"◉","title":"Vitamin C","text":"Targets dullness with brightening support for more luminous, even-looking skin."}},"ingredient_UjhYrc":{"type":"ingredient","settings":{"image_alt":"Skincare ingredient","symbol":"◆","title":"Hyaluronic Acid","text":"Draws in moisture for lasting hydration and smoother, more supple-feeling skin."}},"ingredient_xp8NEV":{"type":"ingredient","settings":{"image_alt":"Skincare ingredient","symbol":"✦","title":"Botanical Extracts","text":"Plant-derived extracts including coffee extract help soothe and energize the feel of skin."}}},"block_order":["ingredient_4h96hr","ingredient_7PC9h8","ingredient_UjhYrc","ingredient_xp8NEV"],"custom_css":[".eco-eyebrow {font-size: 1.35rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--eco-accent-light); margin: 0 0 8px;}"],"name":"Ingredients - Ecophoria","settings":{"eyebrow":"Ingredient science","heading":"Clinically minded ingredients, botanical sensibility"}},"mission_ecophoria_BbBffB":{"type":"mission-ecophoria","blocks":{"point_zrYHYn":{"type":"point","settings":{"text":"Vegan formulas designed for ingredient-conscious skincare routines."}},"point_atY9LG":{"type":"point","settings":{"text":"Cruelty-free product development with clean, modern sensorial textures."}},"point_d9Ldrg":{"type":"point","settings":{"text":"Botanical science paired with proven actives like niacinamide, vitamin C, and hyaluronic acid."}},"point_KadxzP":{"type":"point","settings":{"text":"Ethical sourcing and sustainable packaging that supports lower-impact beauty."}}},"block_order":["point_zrYHYn","point_atY9LG","point_d9Ldrg","point_KadxzP"],"custom_css":[".eco-eyebrow {font-size: 1.35rem !important; line-height: 1.2;}",".eco-hero__sub {font-size: 1.35rem !important; line-height: 1.5;}"],"name":"Mission - Ecophoria","settings":{"eyebrow":"Brand mission","heading":"Luxury clean skincare with values built in","text":"Ecophoria blends clean ingredients, botanical science, and ethical sourcing into a skincare ritual that feels luxurious and aligns with conscious beauty values.","image":"shopify:\/\/shop_images\/Luxury_skincare_ad_202604062009.jpg","image_alt":"Sustainable Ecophoria skincare packaging","cta_eyebrow":"Ready to begin","cta_heading":"Experience Clean Skincare That Works","cta_text":"Discover formulas that combine high-performance actives, vegan standards, and elevated daily care.","cta_button":"Explore the Collection","cta_link":""}},"products_ecophoria_PjUCwr":{"type":"products-ecophoria","custom_css":[".eco-eyebrow {font-size: 1.35rem !important; line-height: 1.2;}",".eco-hero__sub {font-size: 1.35rem !important; line-height: 1.5;}"],"name":"Products - Ecophoria","settings":{"brand_name":"Ecophoria","eyebrow":"Most loved","heading":"Best Sellers","collection":"the-vitamin-c-collection","products_to_show":4,"empty_text":"Select a collection in the theme editor to display products here."}},"footer_ecophoria_6nqAd4":{"type":"footer-ecophoria","blocks":{"link_column_Han6zN":{"type":"link_column","settings":{"title":"Shop","links":"All Products|\/collections\/all\nBest Sellers|\/collections\/best-sellers\nNew Arrivals|\/collections\/new"}},"link_column_zCc8Ki":{"type":"link_column","settings":{"title":"Support","links":"Contact|\/pages\/contact\nShipping|\/pages\/shipping\nReturns|\/pages\/returns"}},"link_column_nmMxkf":{"type":"link_column","settings":{"title":"Legal","links":"Privacy Policy|\/policies\/privacy-policy\nTerms of Service|\/policies\/terms-of-service"}}},"block_order":["link_column_Han6zN","link_column_zCc8Ki","link_column_nmMxkf"],"name":"Footer - Ecophoria","settings":{"brand_name":"Ecophoria","tagline":"Clean vegan skincare that combines botanical science with luxury formulations.","shop_text":"Shop","shop_link":"","story_text":"Our Story","story_link":"","instagram_url":"","pinterest_url":"","copyright":"All rights reserved.","credit":"Clean vegan skincare where nature meets luxury."}}},"order":["custom_liquid_rFrDLX","announcement-bar","header","hero_ecophoria_j37PJk","ingredients_ecophoria_gYBA7e","mission_ecophoria_BbBffB","products_ecophoria_PjUCwr","footer_ecophoria_6nqAd4"]}
+{
+  "type": "header",
+  "name": "t:sections.header.name",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping on Orders $75+",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["announcement-bar-0"],
+      "settings": {
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "color_scheme": "scheme-3",
+        "show_line_separator": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_position": "middle-center",
+        "mobile_logo_position": "center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": false,
+        "color_scheme": "scheme-1",
+        "menu_color_scheme": "scheme-1",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": ["announcement-bar", "header"]
+}
