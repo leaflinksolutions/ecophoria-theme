@@ -1,1 +1,595 @@
-{"sections":{"image_banner_iMjfWp":{"type":"image-banner","blocks":{"buttons_BpFjMX":{"type":"buttons","disabled":true,"settings":{"button_label_1":"SHOP","button_link_1":"shopify:\/\/collections\/all-products","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}},"heading_kLihf9":{"type":"heading","disabled":true,"settings":{"heading":"Clean Beauty, Real Results","heading_size":"h1"}},"text_qhAF8h":{"type":"text","disabled":true,"settings":{"text":"<strong>100% Vegan • Cruelty-Free • Made in USA • No Parabens • No Sulfates<\/strong>","text_style":"body"}}},"block_order":["buttons_BpFjMX","heading_kLihf9","text_qhAF8h"],"disabled":true,"name":"t:sections.image-banner.presets.name","settings":{"image":"shopify:\/\/shop_images\/hero_imagess_42a8ce34-d69c-463f-9076-8e5937683fbb.jpg","image_overlay_opacity":10,"image_height":"adapt","image_behavior":"none","desktop_content_position":"middle-center","desktop_content_alignment":"center","show_text_box":false,"color_scheme":"scheme-ecophoria-green","stack_images_on_mobile":true,"mobile_content_alignment":"center","show_text_below":true}},"featured-collection":{"type":"featured-collection","disabled":true,"settings":{"collection":"all","products_to_show":4,"title":"<strong>Handpicked Essentials<\/strong>","heading_size":"h2","description":"","show_description":true,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":false,"view_all_style":"solid","color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":true,"padding_top":56,"padding_bottom":68}},"collapsible_content_VGYgre":{"type":"collapsible-content","blocks":{"collapsible_row_hzb6Pa":{"type":"collapsible_row","settings":{"heading":"Healthier-Looking Skin","icon":"leaf","row_content":"<p><strong>Using these products consistently helps your skin look and feel healthier over time. They work to improve overall skin texture, reduce roughness, and leave your complexion feeling refreshed. With regular care, your skin appears smoother, more resilient, and naturally balanced, giving you confidence in your everyday look.<\/strong><\/p>","page":""}},"collapsible_row_djwc3Q":{"type":"collapsible_row","settings":{"heading":"Soft and Hydrated","icon":"leaf","row_content":"<p><strong>These formulas provide deep, long-lasting hydration to keep your skin feeling soft and comfortable throughout the day. They help maintain the skin’s natural moisture balance, prevent dryness, and support a supple, healthy feel. Daily use ensures your skin stays nourished and resilient, even in challenging weather conditions or after exposure to environmental stressors.<\/strong><\/p>","page":""}},"collapsible_row_y4dbbn":{"type":"collapsible_row","settings":{"heading":"Gentle and Effective","icon":"leaf","row_content":"<p><strong>Carefully formulated to be gentle yet effective, these products are suitable for all skin types, including sensitive skin. They deliver results without causing irritation, dryness, or discomfort, making them safe for everyday use. Over time, they help strengthen the skin’s natural barrier and support overall skin health, so your daily routine becomes simple, effective, and worry-free.<\/strong><\/p>","page":""}},"collapsible_row_NiKefw":{"type":"collapsible_row","settings":{"heading":"Radiance and Even Tone","icon":"leaf","row_content":"<p><strong>Regular use helps your skin look brighter and more even-toned, reducing the appearance of dullness and uneven areas. With consistent care, your complexion appears revitalized and luminous. These products help support a more balanced skin tone, enhance natural radiance, and create a healthy, glowing look that improves with time.<\/strong><\/p>","page":""}}},"block_order":["collapsible_row_hzb6Pa","collapsible_row_djwc3Q","collapsible_row_y4dbbn","collapsible_row_NiKefw"],"disabled":true,"name":"t:sections.collapsible_content.presets.name","settings":{"caption":"The Benefits of Daily Care","heading":"<strong>Why Your Skin Will Thank You<\/strong>","heading_size":"h1","heading_alignment":"center","layout":"row","container_color_scheme":"","color_scheme":"","open_first_collapsible_row":true,"image":"shopify:\/\/shop_images\/Create_a_highresolution_2k_202602141346.jpg","image_ratio":"adapt","desktop_layout":"image_second","padding_top":12,"padding_bottom":12}},"image_with_text_n7L3En":{"type":"image-with-text","blocks":{"heading_C8Gy3r":{"type":"heading","settings":{"heading":"<strong>Hyaluronic Acid Deep Hydration Gel | Plump & Hydrate All Skin Types<\/strong>","heading_size":"h2"}},"text_3CF6pp":{"type":"text","settings":{"text":"<p>Quench your skin's thirst with this lightweight, deeply hydrating gel. Formulated with multi-weight Hyaluronic Acid, it delivers instant and long lasting moisture to all skin layers. Perfect for all skin types, especially dehydrated and sensitive skin.<\/p>","text_style":"body"}},"button_QLiqj3":{"type":"button","settings":{"button_label":"SHOP NOW!!","button_link":"shopify:\/\/products\/hyaluronic-acid-hydrating-gel","button_style_secondary":false}}},"block_order":["heading_C8Gy3r","text_3CF6pp","button_QLiqj3"],"disabled":true,"name":"t:sections.image-with-text.presets.name","settings":{"image":"shopify:\/\/shop_images\/ecophoria-hyaluronic-acid-hydrating-gel_png_5ba842a5-40c0-4465-9656-562a811a33bb.png","height":"adapt","desktop_image_width":"medium","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"scheme-1","color_scheme":"scheme-1","padding_top":16,"padding_bottom":12}},"featured_product_RMTKPj":{"type":"featured-product","blocks":{"text_XEhkGq":{"type":"text","settings":{"text":"{{ section.settings.product.vendor }}","text_style":"uppercase"}},"title_zKg4ci":{"type":"title","settings":{"heading_size":"h1"}},"price_LwmRjF":{"type":"price","settings":{}},"variant_picker_rALDih":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector_eYMFPR":{"type":"quantity_selector","settings":{}},"buy_buttons_97GhiG":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"icon_with_text_pG6CeM":{"type":"icon-with-text","settings":{"layout":"horizontal","icon_1":"heart","image_1":"shopify:\/\/shop_images\/v.png","heading_1":"<strong>VEGAN<\/strong>","icon_2":"return","image_2":"shopify:\/\/shop_images\/vegan.png","heading_2":"<strong>CRUELTY-FREE<\/strong>","icon_3":"truck","image_3":"shopify:\/\/shop_images\/usA.png","heading_3":"<strong>MADE IN USA<\/strong>"}},"share_hiCRdA":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["text_XEhkGq","title_zKg4ci","price_LwmRjF","variant_picker_rALDih","quantity_selector_eYMFPR","buy_buttons_97GhiG","icon_with_text_pG6CeM","share_hiCRdA"],"disabled":true,"name":"t:sections.featured-product.presets.name","settings":{"product":"niacinamide-vitamin-c-serum","color_scheme":"","secondary_background":false,"media_size":"small","constrain_to_viewport":true,"media_fit":"contain","media_position":"left","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":false,"padding_top":12,"padding_bottom":12}},"featured_collection_atwW3M":{"type":"featured-collection","disabled":true,"name":"t:sections.featured-collection.presets.name","settings":{"collection":"bestsellers","products_to_show":4,"title":"Bestsellers","heading_size":"h1","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["image_banner_iMjfWp","featured-collection","collapsible_content_VGYgre","image_with_text_n7L3En","featured_product_RMTKPj","featured_collection_atwW3M"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_iMjfWp": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_BpFjMX": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "SHOP",
+            "button_link_1": "shopify://collections/all-products",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "heading_kLihf9": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Clean Beauty, Real Results",
+            "heading_size": "h1"
+          }
+        },
+        "text_qhAF8h": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<strong>100% Vegan • Cruelty-Free • Made in USA • No Parabens • No Sulfates</strong>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "buttons_BpFjMX",
+        "heading_kLihf9",
+        "text_qhAF8h"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/hero_imagess_42a8ce34-d69c-463f-9076-8e5937683fbb.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-ecophoria-green",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "all",
+        "products_to_show": 4,
+        "title": "<strong>Handpicked Essentials</strong>",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 56,
+        "padding_bottom": 68
+      }
+    },
+    "collapsible_content_VGYgre": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_hzb6Pa": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Healthier-Looking Skin",
+            "icon": "leaf",
+            "row_content": "<p><strong>Using these products consistently helps your skin look and feel healthier over time. They work to improve overall skin texture, reduce roughness, and leave your complexion feeling refreshed. With regular care, your skin appears smoother, more resilient, and naturally balanced, giving you confidence in your everyday look.</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_djwc3Q": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Soft and Hydrated",
+            "icon": "leaf",
+            "row_content": "<p><strong>These formulas provide deep, long-lasting hydration to keep your skin feeling soft and comfortable throughout the day. They help maintain the skin’s natural moisture balance, prevent dryness, and support a supple, healthy feel. Daily use ensures your skin stays nourished and resilient, even in challenging weather conditions or after exposure to environmental stressors.</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_y4dbbn": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Gentle and Effective",
+            "icon": "leaf",
+            "row_content": "<p><strong>Carefully formulated to be gentle yet effective, these products are suitable for all skin types, including sensitive skin. They deliver results without causing irritation, dryness, or discomfort, making them safe for everyday use. Over time, they help strengthen the skin’s natural barrier and support overall skin health, so your daily routine becomes simple, effective, and worry-free.</strong></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_NiKefw": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Radiance and Even Tone",
+            "icon": "leaf",
+            "row_content": "<p><strong>Regular use helps your skin look brighter and more even-toned, reducing the appearance of dullness and uneven areas. With consistent care, your complexion appears revitalized and luminous. These products help support a more balanced skin tone, enhance natural radiance, and create a healthy, glowing look that improves with time.</strong></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_hzb6Pa",
+        "collapsible_row_djwc3Q",
+        "collapsible_row_y4dbbn",
+        "collapsible_row_NiKefw"
+      ],
+      "disabled": true,
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "caption": "The Benefits of Daily Care",
+        "heading": "<strong>Why Your Skin Will Thank You</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "row",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image": "shopify://shop_images/Create_a_highresolution_2k_202602141346.jpg",
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "image_with_text_n7L3En": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_C8Gy3r": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Hyaluronic Acid Deep Hydration Gel | Plump & Hydrate All Skin Types</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_3CF6pp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Quench your skin's thirst with this lightweight, deeply hydrating gel. Formulated with multi-weight Hyaluronic Acid, it delivers instant and long lasting moisture to all skin layers. Perfect for all skin types, especially dehydrated and sensitive skin.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_QLiqj3": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW!!",
+            "button_link": "shopify://products/hyaluronic-acid-hydrating-gel",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_C8Gy3r",
+        "text_3CF6pp",
+        "button_QLiqj3"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/ecophoria-hyaluronic-acid-hydrating-gel_png_5ba842a5-40c0-4465-9656-562a811a33bb.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 16,
+        "padding_bottom": 12
+      }
+    },
+    "featured_product_RMTKPj": {
+      "type": "featured-product",
+      "blocks": {
+        "text_XEhkGq": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_zKg4ci": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_LwmRjF": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_rALDih": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_eYMFPR": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_97GhiG": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "icon_with_text_pG6CeM": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify://shop_images/v.png",
+            "heading_1": "<strong>VEGAN</strong>",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/vegan.png",
+            "heading_2": "<strong>CRUELTY-FREE</strong>",
+            "icon_3": "truck",
+            "image_3": "shopify://shop_images/usA.png",
+            "heading_3": "<strong>MADE IN USA</strong>"
+          }
+        },
+        "share_hiCRdA": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_XEhkGq",
+        "title_zKg4ci",
+        "price_LwmRjF",
+        "variant_picker_rALDih",
+        "quantity_selector_eYMFPR",
+        "buy_buttons_97GhiG",
+        "icon_with_text_pG6CeM",
+        "share_hiCRdA"
+      ],
+      "disabled": true,
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "niacinamide-vitamin-c-serum",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "featured_collection_atwW3M": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "bestsellers",
+        "products_to_show": 4,
+        "title": "Bestsellers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "hero_ecophoria_xEz9mD": {
+      "type": "hero-ecophoria",
+      "blocks": {
+        "image_slide_BrcAHe": {
+          "type": "image_slide",
+          "settings": {
+            "image_alt": "Ecophoria skincare"
+          }
+        },
+        "image_slide_e6YCUh": {
+          "type": "image_slide",
+          "settings": {
+            "image_alt": "Ecophoria skincare"
+          }
+        }
+      },
+      "block_order": [
+        "image_slide_BrcAHe",
+        "image_slide_e6YCUh"
+      ],
+      "name": "Hero - Ecophoria",
+      "settings": {
+        "eyebrow": "Clean vegan skincare where nature meets luxury",
+        "heading": "Clean Vegan Skincare That Delivers Real Results",
+        "subheading": "Plant-powered formulas with clinically proven actives designed for radiant healthy skin.",
+        "primary_text": "Shop Skincare",
+        "primary_link": "",
+        "secondary_text": "Our Story",
+        "secondary_link": "",
+        "badges": "100% Vegan|Cruelty-Free|Clean Ingredients|No Parabens|No Sulfates",
+        "slide_interval": "6000",
+        "carousel_label": "Hero slideshow"
+      }
+    },
+    "products_ecophoria_dKXxmd": {
+      "type": "products-ecophoria",
+      "name": "Products - Ecophoria",
+      "settings": {
+        "brand_name": "Ecophoria",
+        "eyebrow": "Most loved",
+        "heading": "Best Sellers",
+        "collection": "",
+        "products_to_show": 4,
+        "view_all_text": "View All Products",
+        "view_all_link": "",
+        "empty_text": "Select a collection in the theme editor to display products here."
+      }
+    },
+    "ingredients_ecophoria_yrdWdy": {
+      "type": "ingredients-ecophoria",
+      "blocks": {
+        "ingredient_pXKxJW": {
+          "type": "ingredient",
+          "settings": {
+            "url": "",
+            "image_alt": "Skincare ingredient",
+            "symbol": "◈",
+            "title": "Niacinamide",
+            "text": "Helps refine the look of pores, support a balanced complexion, and improve visible skin clarity."
+          }
+        },
+        "ingredient_4pTtrr": {
+          "type": "ingredient",
+          "settings": {
+            "url": "",
+            "image_alt": "Skincare ingredient",
+            "symbol": "◉",
+            "title": "Vitamin C",
+            "text": "Targets dullness with brightening support for more luminous, even-looking skin."
+          }
+        },
+        "ingredient_YVQ4kL": {
+          "type": "ingredient",
+          "settings": {
+            "url": "",
+            "image_alt": "Skincare ingredient",
+            "symbol": "◆",
+            "title": "Hyaluronic Acid",
+            "text": "Draws in moisture for lasting hydration and smoother, more supple-feeling skin."
+          }
+        },
+        "ingredient_8qLhaD": {
+          "type": "ingredient",
+          "settings": {
+            "url": "",
+            "image_alt": "Skincare ingredient",
+            "symbol": "✦",
+            "title": "Botanical Extracts",
+            "text": "Plant-derived extracts including coffee extract help soothe and energize the feel of skin."
+          }
+        }
+      },
+      "block_order": [
+        "ingredient_pXKxJW",
+        "ingredient_4pTtrr",
+        "ingredient_YVQ4kL",
+        "ingredient_8qLhaD"
+      ],
+      "name": "Ingredients - Ecophoria",
+      "settings": {
+        "eyebrow": "Ingredient science",
+        "heading": "Clinically minded ingredients, botanical sensibility",
+        "cta_text": "View All Ingredients",
+        "cta_link": ""
+      }
+    },
+    "benefits_ecophoria_g6BANU": {
+      "type": "benefits-ecophoria",
+      "blocks": {
+        "benefit_tAkLTr": {
+          "type": "benefit",
+          "settings": {
+            "icon": "💧",
+            "title": "Hydration",
+            "text": "Moisture-locking formulas help skin feel soft, comfortable, and replenished."
+          }
+        },
+        "benefit_gzC7pd": {
+          "type": "benefit",
+          "settings": {
+            "icon": "✨",
+            "title": "Brightening",
+            "text": "Active ingredients help revive the look of dull skin for a fresher glow."
+          }
+        },
+        "benefit_DVcYgE": {
+          "type": "benefit",
+          "settings": {
+            "icon": "🌿",
+            "title": "Anti-aging",
+            "text": "Support smoother-looking skin and a more refined, resilient appearance."
+          }
+        },
+        "benefit_GpWheW": {
+          "type": "benefit",
+          "settings": {
+            "icon": "🛡",
+            "title": "Skin Barrier",
+            "text": "Gentle, clean formulas help reinforce a healthy-feeling barrier over time."
+          }
+        }
+      },
+      "block_order": [
+        "benefit_tAkLTr",
+        "benefit_gzC7pd",
+        "benefit_DVcYgE",
+        "benefit_GpWheW"
+      ],
+      "name": "Benefits - Ecophoria",
+      "settings": {
+        "eyebrow": "What your skin sees",
+        "heading": "Targeted benefits for modern clean skincare routines",
+        "cta_text": "Explore Benefits",
+        "cta_link": ""
+      }
+    },
+    "mission_ecophoria_TURDpN": {
+      "type": "mission-ecophoria",
+      "blocks": {
+        "point_eJiwee": {
+          "type": "point",
+          "settings": {
+            "text": "Vegan formulas designed for ingredient-conscious skincare routines."
+          }
+        },
+        "point_UhJcdy": {
+          "type": "point",
+          "settings": {
+            "text": "Cruelty-free product development with clean, modern sensorial textures."
+          }
+        },
+        "point_Jjmt9M": {
+          "type": "point",
+          "settings": {
+            "text": "Botanical science paired with proven actives like niacinamide, vitamin C, and hyaluronic acid."
+          }
+        },
+        "point_hG36Xn": {
+          "type": "point",
+          "settings": {
+            "text": "Ethical sourcing and sustainable packaging that supports lower-impact beauty."
+          }
+        }
+      },
+      "block_order": [
+        "point_eJiwee",
+        "point_UhJcdy",
+        "point_Jjmt9M",
+        "point_hG36Xn"
+      ],
+      "name": "Mission - Ecophoria",
+      "settings": {
+        "eyebrow": "Brand mission",
+        "heading": "Luxury clean skincare with values built in",
+        "text": "Ecophoria blends clean ingredients, botanical science, and ethical sourcing into a skincare ritual that feels luxurious and aligns with conscious beauty values.",
+        "image_alt": "Sustainable Ecophoria skincare packaging",
+        "cta_eyebrow": "Ready to begin",
+        "cta_heading": "Experience Clean Skincare That Works",
+        "cta_text": "Discover formulas that combine high-performance actives, vegan standards, and elevated daily care.",
+        "cta_button": "Explore the Collection",
+        "cta_link": ""
+      }
+    },
+    "footer_ecophoria_xQUwjM": {
+      "type": "footer-ecophoria",
+      "blocks": {
+        "link_column_9ierBw": {
+          "type": "link_column",
+          "settings": {
+            "title": "Shop",
+            "links": "All Products|/collections/all\nBest Sellers|/collections/best-sellers\nNew Arrivals|/collections/new"
+          }
+        },
+        "link_column_rh3Qde": {
+          "type": "link_column",
+          "settings": {
+            "title": "Info",
+            "links": "About Us|/pages/about-us\nFAQ|/pages/faq\nContact|/pages/contact-form"
+          }
+        },
+        "link_column_VNMgiN": {
+          "type": "link_column",
+          "settings": {
+            "title": "Support",
+            "links": "Shipping|/pages/shipping\nReturns|/pages/returns"
+          }
+        },
+        "link_column_gUHPq9": {
+          "type": "link_column",
+          "settings": {
+            "title": "Legal",
+            "links": "Privacy Policy|/policies/privacy-policy\nTerms of Service|/policies/terms-of-service"
+          }
+        }
+      },
+      "block_order": [
+        "link_column_9ierBw",
+        "link_column_rh3Qde",
+        "link_column_VNMgiN",
+        "link_column_gUHPq9"
+      ],
+      "name": "Footer - Ecophoria",
+      "settings": {
+        "brand_name": "Ecophoria",
+        "tagline": "Clean vegan skincare that combines botanical science with luxury formulations.",
+        "shop_text": "Shop",
+        "shop_link": "",
+        "story_text": "Our Story",
+        "story_link": "",
+        "instagram_url": "",
+        "tiktok_url": "",
+        "pinterest_url": "",
+        "copyright": "All rights reserved.",
+        "credit": "Clean vegan skincare where nature meets luxury."
+      }
+    }
+  },
+  "order": [
+    "image_banner_iMjfWp",
+    "featured-collection",
+    "collapsible_content_VGYgre",
+    "image_with_text_n7L3En",
+    "featured_product_RMTKPj",
+    "featured_collection_atwW3M",
+    "hero_ecophoria_xEz9mD",
+    "products_ecophoria_dKXxmd",
+    "ingredients_ecophoria_yrdWdy",
+    "benefits_ecophoria_g6BANU",
+    "mission_ecophoria_TURDpN",
+    "footer_ecophoria_xQUwjM"
+  ]
+}
