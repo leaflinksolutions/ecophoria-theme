@@ -356,8 +356,9 @@
         "slide_interval": "10000",
         "carousel_label": "Hero slideshow",
         "hero_height": "medium",
-        "overlay_opacity": 25,
-        "heading_size": "large"
+        "overlay_opacity": 30,
+        "heading_size": "large",
+        "font_scale": 115
       }
     },
     "products_ecophoria_dKXxmd": {
@@ -371,7 +372,8 @@
         "products_to_show": 4,
         "view_all_text": "View All Products",
         "view_all_link": "",
-        "empty_text": "Select a collection in the theme editor to display products here."
+        "empty_text": "Select a collection in the theme editor to display products here.",
+        "font_scale": 100
       }
     },
     "ingredients_ecophoria_yrdWdy": {
@@ -433,7 +435,8 @@
         "eyebrow": "Ingredient science",
         "heading": "Clinically minded ingredients, botanical sensibility",
         "cta_text": "View All Ingredients",
-        "cta_link": ""
+        "cta_link": "",
+        "font_scale": 100
       }
     },
     "benefits_ecophoria_g6BANU": {
@@ -483,7 +486,8 @@
         "eyebrow": "What your skin sees",
         "heading": "Targeted benefits for modern clean skincare routines",
         "cta_text": "Explore Benefits",
-        "cta_link": ""
+        "cta_link": "",
+        "font_scale": 100
       }
     },
     "mission_ecophoria_TURDpN": {
@@ -531,7 +535,8 @@
         "cta_heading": "Experience Clean Skincare That Works",
         "cta_text": "Discover formulas that combine high-performance actives, vegan standards, and elevated daily care.",
         "cta_button": "Explore the Collection",
-        "cta_link": "shopify://collections"
+        "cta_link": "shopify://collections",
+        "font_scale": 100
       }
     },
     "footer_ecophoria_xQUwjM": {
@@ -584,7 +589,8 @@
         "tiktok_url": "",
         "pinterest_url": "",
         "copyright": "All rights reserved.",
-        "credit": "Clean vegan skincare where nature meets luxury."
+        "credit": "Clean vegan skincare where nature meets luxury.",
+        "font_scale": 100
       }
     }
   },
