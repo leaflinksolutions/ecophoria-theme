@@ -650,3 +650,101 @@
     color: #d4d4d8 !important;
   }
 </style>
+
+<style>
+  /* AGGRESSIVE site-wide dark background — covers Sense theme color schemes */
+  html,
+  html body,
+  body.template-page,
+  body.template-article,
+  body.template-blog,
+  body.template-collection,
+  body.template-product,
+  body.template-cart,
+  body.template-search,
+  body.template-list-collections,
+  body.template-customers-account,
+  body.template-customers-login,
+  body.template-customers-register,
+  body.template-customers-addresses,
+  body.template-customers-order,
+  body.template-customers-reset_password,
+  body.template-customers-activate_account,
+  body.template-404,
+  body.template-password,
+  body.gradient,
+  .color-scheme-1,
+  .color-scheme-2,
+  .color-scheme-3,
+  .color-scheme-4,
+  .color-scheme-5,
+  .color-background-1,
+  .color-background-2,
+  .background-1,
+  .background-2,
+  .gradient {
+    background: #080808 !important;
+    background-color: #080808 !important;
+    background-image: none !important;
+    color: #d4d4d8 !important;
+  }
+
+  /* Force every section wrapper dark */
+  .shopify-section,
+  .shopify-section + .shopify-section,
+  main#MainContent,
+  main#MainContent > *,
+  .page-width,
+  .section,
+  .section-template,
+  .page,
+  .article-template__content,
+  .rich-text,
+  .rich-text__wrapper,
+  .rich-text__blocks {
+    background: #080808 !important;
+    background-color: #080808 !important;
+    color: #d4d4d8 !important;
+  }
+
+  /* Override any inline color-scheme classes from Sense */
+  [class*='color-scheme'],
+  [class*='gradient'],
+  [class*='background-'] {
+    background: #080808 !important;
+    background-color: #080808 !important;
+    background-image: none !important;
+    color: #d4d4d8 !important;
+  }
+
+  /* Headings — make sure they show on dark */
+  h1, h2, h3, h4, h5, h6,
+  .h0, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #f0efe8 !important;
+  }
+
+  /* All text elements */
+  p, span, li, td, th, dd, dt, label, small, strong, em {
+    color: #d4d4d8 !important;
+  }
+
+  /* Don't override our custom eco sections */
+  .eco-root,
+  .eco-root *,
+  .eco-hero-root,
+  .eco-hero-root *,
+  .eco-products-root,
+  .eco-products-root *,
+  .eco-ing-root,
+  .eco-ing-root *,
+  .eco-ben-root,
+  .eco-ben-root *,
+  .eco-mission-root,
+  .eco-mission-root *,
+  .eco-footer-root,
+  .eco-footer-root *,
+  .eco-announcement,
+  .eco-announcement * {
+    color: inherit;
+  }
+</style>
