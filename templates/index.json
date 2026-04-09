@@ -373,7 +373,7 @@
         "view_all_text": "View All Products",
         "view_all_link": "",
         "empty_text": "Select a collection in the theme editor to display products here.",
-        "font_scale": 100
+        "font_scale": 120
       }
     },
     "ingredients_ecophoria_yrdWdy": {
@@ -436,7 +436,7 @@
         "heading": "Clinically minded ingredients, botanical sensibility",
         "cta_text": "View All Ingredients",
         "cta_link": "",
-        "font_scale": 100
+        "font_scale": 125
       }
     },
     "benefits_ecophoria_g6BANU": {
