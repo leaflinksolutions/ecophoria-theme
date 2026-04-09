@@ -600,6 +600,10 @@
         "credit": "Clean vegan skincare where nature meets luxury.",
         "font_scale": 150
       }
+    },
+    "177576873371916bf1": {
+      "type": "_blocks",
+      "settings": {}
     }
   },
   "order": [
@@ -614,6 +618,7 @@
     "ingredients_ecophoria_yrdWdy",
     "benefits_ecophoria_g6BANU",
     "mission_ecophoria_TURDpN",
-    "footer_ecophoria_xQUwjM"
+    "footer_ecophoria_xQUwjM",
+    "177576873371916bf1"
   ]
 }
