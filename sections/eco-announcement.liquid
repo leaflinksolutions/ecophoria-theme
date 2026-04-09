@@ -71,17 +71,15 @@
     background: linear-gradient(270deg, var(--bar-bg, #2e5a45), transparent);
   }
   .eco-announcement__track {
-    display: flex;
-    width: max-content;
+    display: inline-block;
+    white-space: nowrap;
     animation: eco-marquee var(--scroll-speed, 30s) linear infinite;
   }
   .eco-announcement__track:hover {
     animation-play-state: paused;
   }
   .eco-announcement__content {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+    display: inline-block;
   }
   .eco-announcement__item {
     font-size: 1rem;
