@@ -155,3 +155,498 @@
     -webkit-backdrop-filter: blur(16px) !important;
   }
 </style>
+
+<style>
+  /* Global dark theme override for all pages */
+  body,
+  .page-width,
+  main,
+  #MainContent,
+  .shopify-section,
+  .main-page-wrapper,
+  .article-template,
+  .blog-articles,
+  .template-page,
+  .template-article,
+  .template-blog,
+  .template-search,
+  .template-collection,
+  .template-list-collections,
+  .template-product,
+  .template-cart,
+  .template-customers-account,
+  .template-customers-login,
+  .template-customers-register,
+  .template-404 {
+    background: #080808 !important;
+    color: #d4d4d8 !important;
+  }
+
+  /* Page headings */
+  .page-width h1,
+  .page-width h2,
+  .page-width h3,
+  .page-width h4,
+  .page-width h5,
+  .page-width h6,
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main h5,
+  main h6,
+  .article-template h1,
+  .article-template h2,
+  .article-template h3 {
+    color: #f0efe8 !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Page paragraphs and body text */
+  .page-width p,
+  .page-width li,
+  .page-width span:not(.eco-hero__wordmark-text):not(.eco-footer__name),
+  main p,
+  main li,
+  .article-template p,
+  .article-template li,
+  .rte p,
+  .rte li,
+  .rte span {
+    color: #d4d4d8 !important;
+    font-family: 'Outfit', sans-serif !important;
+  }
+
+  /* Page links */
+  .page-width a,
+  main a,
+  .article-template a,
+  .rte a {
+    color: #7fb89a !important;
+    text-shadow: 0 0 10px rgba(127, 184, 154, 0.3);
+  }
+
+  .page-width a:hover,
+  main a:hover,
+  .article-template a:hover,
+  .rte a:hover {
+    color: #a8d5b8 !important;
+    text-shadow: 0 0 16px rgba(168, 213, 184, 0.6);
+  }
+
+  /* Form inputs */
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  input[type='password'],
+  input[type='search'],
+  input[type='url'],
+  input[type='number'],
+  textarea,
+  select {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #d4d4d8 !important;
+    border: 1px solid rgba(180, 180, 185, 0.18) !important;
+    border-radius: 8px !important;
+  }
+
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='tel']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #7fb89a !important;
+    box-shadow: 0 0 16px rgba(127, 184, 154, 0.25) !important;
+    outline: none !important;
+  }
+
+  label {
+    color: #b8b8bd !important;
+  }
+
+  /* Buttons across the site */
+  .button,
+  button[type='submit'],
+  .shopify-payment-button__button {
+    background: #2e5a45 !important;
+    color: #f0efe8 !important;
+    border: 1px solid #2e5a45 !important;
+    box-shadow: 0 0 24px rgba(46, 90, 69, 0.4) !important;
+  }
+
+  .button:hover,
+  button[type='submit']:hover,
+  .shopify-payment-button__button:hover {
+    background: #3a7a5c !important;
+    box-shadow: 0 0 36px rgba(46, 90, 69, 0.6) !important;
+  }
+
+  /* Cards, breadcrumbs, dividers */
+  .card,
+  .card-wrapper,
+  .product-card-wrapper,
+  .collection-card-wrapper {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(180, 180, 185, 0.12) !important;
+  }
+
+  .breadcrumb,
+  .breadcrumb a {
+    color: #8a8a90 !important;
+  }
+
+  hr {
+    border-color: rgba(180, 180, 185, 0.15) !important;
+  }
+
+  /* Tables (FAQ, info pages) */
+  table {
+    background: rgba(255, 255, 255, 0.02) !important;
+    color: #d4d4d8 !important;
+  }
+
+  th, td {
+    border-color: rgba(180, 180, 185, 0.12) !important;
+  }
+
+  /* Cart drawer / modals */
+  .cart-drawer,
+  .modal,
+  .quick-add-modal__content {
+    background: #0d0d0d !important;
+    color: #d4d4d8 !important;
+  }
+</style>
+
+<style>
+  /* Global dark theme override for all pages */
+  body,
+  .page-width,
+  main,
+  #MainContent,
+  .shopify-section,
+  .main-page-wrapper,
+  .article-template,
+  .blog-articles,
+  .template-page,
+  .template-article,
+  .template-blog,
+  .template-search,
+  .template-collection,
+  .template-list-collections,
+  .template-product,
+  .template-cart,
+  .template-customers-account,
+  .template-customers-login,
+  .template-customers-register,
+  .template-404 {
+    background: #080808 !important;
+    color: #d4d4d8 !important;
+  }
+
+  /* Page headings */
+  .page-width h1,
+  .page-width h2,
+  .page-width h3,
+  .page-width h4,
+  .page-width h5,
+  .page-width h6,
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main h5,
+  main h6,
+  .article-template h1,
+  .article-template h2,
+  .article-template h3 {
+    color: #f0efe8 !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Page paragraphs and body text */
+  .page-width p,
+  .page-width li,
+  .page-width span:not(.eco-hero__wordmark-text):not(.eco-footer__name),
+  main p,
+  main li,
+  .article-template p,
+  .article-template li,
+  .rte p,
+  .rte li,
+  .rte span {
+    color: #d4d4d8 !important;
+    font-family: 'Outfit', sans-serif !important;
+  }
+
+  /* Page links */
+  .page-width a,
+  main a,
+  .article-template a,
+  .rte a {
+    color: #7fb89a !important;
+    text-shadow: 0 0 10px rgba(127, 184, 154, 0.3);
+  }
+
+  .page-width a:hover,
+  main a:hover,
+  .article-template a:hover,
+  .rte a:hover {
+    color: #a8d5b8 !important;
+    text-shadow: 0 0 16px rgba(168, 213, 184, 0.6);
+  }
+
+  /* Form inputs */
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  input[type='password'],
+  input[type='search'],
+  input[type='url'],
+  input[type='number'],
+  textarea,
+  select {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #d4d4d8 !important;
+    border: 1px solid rgba(180, 180, 185, 0.18) !important;
+    border-radius: 8px !important;
+  }
+
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='tel']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #7fb89a !important;
+    box-shadow: 0 0 16px rgba(127, 184, 154, 0.25) !important;
+    outline: none !important;
+  }
+
+  label {
+    color: #b8b8bd !important;
+  }
+
+  /* Buttons across the site */
+  .button,
+  button[type='submit'],
+  .shopify-payment-button__button {
+    background: #2e5a45 !important;
+    color: #f0efe8 !important;
+    border: 1px solid #2e5a45 !important;
+    box-shadow: 0 0 24px rgba(46, 90, 69, 0.4) !important;
+  }
+
+  .button:hover,
+  button[type='submit']:hover,
+  .shopify-payment-button__button:hover {
+    background: #3a7a5c !important;
+    box-shadow: 0 0 36px rgba(46, 90, 69, 0.6) !important;
+  }
+
+  /* Cards, breadcrumbs, dividers */
+  .card,
+  .card-wrapper,
+  .product-card-wrapper,
+  .collection-card-wrapper {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(180, 180, 185, 0.12) !important;
+  }
+
+  .breadcrumb,
+  .breadcrumb a {
+    color: #8a8a90 !important;
+  }
+
+  hr {
+    border-color: rgba(180, 180, 185, 0.15) !important;
+  }
+
+  /* Tables (FAQ, info pages) */
+  table {
+    background: rgba(255, 255, 255, 0.02) !important;
+    color: #d4d4d8 !important;
+  }
+
+  th, td {
+    border-color: rgba(180, 180, 185, 0.12) !important;
+  }
+
+  /* Cart drawer / modals */
+  .cart-drawer,
+  .modal,
+  .quick-add-modal__content {
+    background: #0d0d0d !important;
+    color: #d4d4d8 !important;
+  }
+</style>
+
+<style>
+  /* Global dark theme override for all pages */
+  body,
+  .page-width,
+  main,
+  #MainContent,
+  .shopify-section,
+  .main-page-wrapper,
+  .article-template,
+  .blog-articles,
+  .template-page,
+  .template-article,
+  .template-blog,
+  .template-search,
+  .template-collection,
+  .template-list-collections,
+  .template-product,
+  .template-cart,
+  .template-customers-account,
+  .template-customers-login,
+  .template-customers-register,
+  .template-404 {
+    background: #080808 !important;
+    color: #d4d4d8 !important;
+  }
+
+  /* Page headings */
+  .page-width h1,
+  .page-width h2,
+  .page-width h3,
+  .page-width h4,
+  .page-width h5,
+  .page-width h6,
+  main h1,
+  main h2,
+  main h3,
+  main h4,
+  main h5,
+  main h6,
+  .article-template h1,
+  .article-template h2,
+  .article-template h3 {
+    color: #f0efe8 !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Page paragraphs and body text */
+  .page-width p,
+  .page-width li,
+  .page-width span:not(.eco-hero__wordmark-text):not(.eco-footer__name),
+  main p,
+  main li,
+  .article-template p,
+  .article-template li,
+  .rte p,
+  .rte li,
+  .rte span {
+    color: #d4d4d8 !important;
+    font-family: 'Outfit', sans-serif !important;
+  }
+
+  /* Page links */
+  .page-width a,
+  main a,
+  .article-template a,
+  .rte a {
+    color: #7fb89a !important;
+    text-shadow: 0 0 10px rgba(127, 184, 154, 0.3);
+  }
+
+  .page-width a:hover,
+  main a:hover,
+  .article-template a:hover,
+  .rte a:hover {
+    color: #a8d5b8 !important;
+    text-shadow: 0 0 16px rgba(168, 213, 184, 0.6);
+  }
+
+  /* Form inputs */
+  input[type='text'],
+  input[type='email'],
+  input[type='tel'],
+  input[type='password'],
+  input[type='search'],
+  input[type='url'],
+  input[type='number'],
+  textarea,
+  select {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: #d4d4d8 !important;
+    border: 1px solid rgba(180, 180, 185, 0.18) !important;
+    border-radius: 8px !important;
+  }
+
+  input[type='text']:focus,
+  input[type='email']:focus,
+  input[type='tel']:focus,
+  input[type='password']:focus,
+  input[type='search']:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #7fb89a !important;
+    box-shadow: 0 0 16px rgba(127, 184, 154, 0.25) !important;
+    outline: none !important;
+  }
+
+  label {
+    color: #b8b8bd !important;
+  }
+
+  /* Buttons across the site */
+  .button,
+  button[type='submit'],
+  .shopify-payment-button__button {
+    background: #2e5a45 !important;
+    color: #f0efe8 !important;
+    border: 1px solid #2e5a45 !important;
+    box-shadow: 0 0 24px rgba(46, 90, 69, 0.4) !important;
+  }
+
+  .button:hover,
+  button[type='submit']:hover,
+  .shopify-payment-button__button:hover {
+    background: #3a7a5c !important;
+    box-shadow: 0 0 36px rgba(46, 90, 69, 0.6) !important;
+  }
+
+  /* Cards, breadcrumbs, dividers */
+  .card,
+  .card-wrapper,
+  .product-card-wrapper,
+  .collection-card-wrapper {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(180, 180, 185, 0.12) !important;
+  }
+
+  .breadcrumb,
+  .breadcrumb a {
+    color: #8a8a90 !important;
+  }
+
+  hr {
+    border-color: rgba(180, 180, 185, 0.15) !important;
+  }
+
+  /* Tables (FAQ, info pages) */
+  table {
+    background: rgba(255, 255, 255, 0.02) !important;
+    color: #d4d4d8 !important;
+  }
+
+  th, td {
+    border-color: rgba(180, 180, 185, 0.12) !important;
+  }
+
+  /* Cart drawer / modals */
+  .cart-drawer,
+  .modal,
+  .quick-add-modal__content {
+    background: #0d0d0d !important;
+    color: #d4d4d8 !important;
+  }
+</style>
