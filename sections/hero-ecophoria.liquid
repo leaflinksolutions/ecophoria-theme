@@ -10,7 +10,7 @@
   assign slide_count = section.blocks.size
 -%}
 
-<div class="eco-root eco-hero-root" id="eco-hero-{{ section.id }}" style="--font-scale: {{ section.settings.font_scale | default: 100 | divided_by: 100.0 }};">
+<div class="eco-root eco-hero-root" id="eco-hero-{{ section.id }}" style="--font-scale: {{ section.settings.font_scale | default: 100 | divided_by: 100.0 }}; --mobile-fit: {{ section.settings.mobile_image_fit | default: 'contain' }};">
 
   <p class="eco-sr-only">Ecophoria is a Canadian clean vegan skincare brand offering cruelty-free products with clinically proven actives including niacinamide, vitamin C, hyaluronic acid, and botanical extracts. Plant-powered, sustainably packaged luxury skincare. Free shipping available across Canada.</p>
 
@@ -463,7 +463,68 @@
     border-color: var(--eco-silver-light);
   }
 
-  /* ---- Responsive ---- */
+  /* ---- Mobile: full image stacked layout ---- */
+
+  @media (max-width: 749px) {
+    .eco-hero {
+      min-height: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      padding: 0 !important;
+    }
+
+    .eco-hero__slideshow {
+      position: relative !important;
+      height: auto !important;
+      aspect-ratio: 3 / 4;
+      width: 100% !important;
+      flex-shrink: 0;
+    }
+
+    .eco-hero__slide {
+      position: absolute !important;
+      inset: 0 !important;
+    }
+
+    .eco-hero__slide img {
+      object-fit: var(--mobile-fit, contain) !important;
+      object-position: center center !important;
+      background: var(--eco-bg, #080808);
+    }
+
+    .eco-hero__overlay {
+      display: none !important;
+    }
+
+    .eco-hero__inner {
+      position: relative !important;
+      padding: 32px 20px 48px !important;
+      background: var(--eco-bg, #080808);
+    }
+
+    .eco-hero__content {
+      max-width: 100% !important;
+    }
+
+    .eco-hero__controls {
+      position: absolute !important;
+      bottom: 12px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      z-index: 5 !important;
+    }
+
+    .eco-hero__cta {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .eco-hero__cta .eco-btn {
+      width: 100%;
+    }
+  }
+
+  /* ---- Responsive (601–749px handled above) ---- */
 
   @media (max-width: 600px) {
     .eco-hero__cta {
@@ -710,6 +771,16 @@
       "step": 5,
       "default": 100,
       "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "mobile_image_fit",
+      "label": "Mobile image behavior",
+      "options": [
+        { "value": "cover", "label": "Fill (crop edges)" },
+        { "value": "contain", "label": "Fit entire image" }
+      ],
+      "default": "contain"
     }
   ],
   "blocks": [

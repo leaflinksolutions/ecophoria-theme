@@ -21,9 +21,9 @@
   .header__active-menu-item {
     color: #d4d4d8 !important;
     font-family: 'Outfit', sans-serif !important;
-    font-size: 0.85rem !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.12em !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.14em !important;
     text-transform: uppercase !important;
     transition: all 0.3s ease !important;
     text-decoration: none !important;
@@ -55,6 +55,7 @@
 
   .header__submenu .header__menu-item {
     color: #b8b8bd !important;
+    font-size: 0.95rem !important;
   }
 
   .header__submenu .header__menu-item:hover {
@@ -68,6 +69,8 @@
   .header__icon-wrapper svg {
     color: #d4d4d8 !important;
     fill: #d4d4d8 !important;
+    width: 26px !important;
+    height: 26px !important;
   }
 
   .header__icon:hover,
@@ -112,9 +115,21 @@
   .announcement-bar p {
     color: #d4d4d8 !important;
     font-family: 'Outfit', sans-serif !important;
-    font-size: 0.78rem !important;
+    font-size: 0.95rem !important;
     font-weight: 500 !important;
     letter-spacing: 0.12em !important;
+  }
+
+  @media (max-width: 749px) {
+    .announcement-bar__message,
+    .announcement-bar span,
+    .announcement-bar p {
+      font-size: 0.92rem !important;
+      padding: 0 18px !important;
+    }
+    .announcement-bar {
+      padding: 14px 0 !important;
+    }
   }
 
   /* Mobile menu drawer */
